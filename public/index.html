@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.3.3/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.3.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.3.3/firebase-performance.js"></script>
+
   
   </head>
   <body>
     <h1>JustApp</h1>
 
-   <script src= "DondeHaganElCodigo.js"></script>
+  
 
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDukfAijUKbO_Ji5mFAwQrOPqUly9jakRg",
+      authDomain: "justapp-3f5e5.firebaseapp.com",
+      databaseURL: "https://justapp-3f5e5-default-rtdb.firebaseio.com",
+      projectId: "justapp-3f5e5",
+      storageBucket: "justapp-3f5e5.appspot.com",
+      messagingSenderId: "83155656759",
+      appId: "1:83155656759:web:0983a699d5830ce56e1fb2",
+      measurementId: "G-KHXE8QNJ1H"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({timestampsInSnapshots: true});
+  </script>
+  <script src= "app.js"></script>
 
   </body>
 </html>
