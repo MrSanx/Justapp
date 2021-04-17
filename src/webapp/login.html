@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="sources\brand.png" type="image/icon type">
-  <title>Home | Justapp</title>
+  <title>Login | Justapp</title>
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/8.3.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
@@ -14,6 +14,8 @@
   <!--FONTS-->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  
   <!--CSS-->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -42,8 +44,16 @@
     <!--Cover-->
     <div class="cover">
       <h1>Esto es una prueba</h1>
-      <img src="sources/logo.svg" alt="logo">
-      <img src="sources/1920_Pre.png" alt="prueba">
+      <form action="">
+        <div class="input-field">
+          <input type="email" id="email" placeholder="Correo electrónico">
+          <input type="password" id="password" placeholder="Contraseña">
+        </div>
+        <div class="input-field">
+          <button class="btn">Submit</button>
+        </div>
+      </form>
+      <a href="signup.html" class="btn-small purple">Registrarse</a>
     <!--Hotbar-->
     <div class="hotbar">
 

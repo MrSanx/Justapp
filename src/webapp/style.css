@@ -9,6 +9,7 @@ body{
 .cover{
     min-height: calc(100vh - 211px - 472px);
 }
+
 footer{
     bottom: 0;
     left: 0;
