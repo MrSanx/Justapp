@@ -22,8 +22,8 @@ signupForm.addEventListener('submit', (e) => {
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         //what happens when the user signs up
         signupForm.reset();
-    })
-})
+    });
+});
 
 
 //logout
@@ -31,7 +31,7 @@ const logout = document.querySelector('INSERTAR EL ID DEL BOTON DE LOGOUT');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut();
-})
+});
 
 
 //login
@@ -44,6 +44,6 @@ loginForm.addEventListener('submit', (e) => {
 
     auth.signInWithEmailAndPassword(email, password).then(cred =>{
         //what happens when the user logs in
-    })
-})
+    });
+});
 
