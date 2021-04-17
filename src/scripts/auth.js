@@ -32,15 +32,17 @@ signupForm.addEventListener('submit', (e) => {
     });
 });
 
-/*
+
 //logout
-const logout = document.querySelector('INSERTAR EL ID DEL BOTON DE LOGOUT');
+const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
-    auth.signOut();
+    auth.signOut().then(() => {
+        console.log('user logged out');
+    });
 });
 
-
+/*
 //login
 const loginForm = document.querySelector('INSERTAR EL ID DEL FORM DE LOGIN');
 loginForm.addEventListener('submit', (e) => {
