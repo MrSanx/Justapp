@@ -9,9 +9,6 @@ body {
 
 /* Header */
 
-.header{
-    background:greenyellow;
-}
 .nav-main a {
     font-size: large;
     font-family: 'Roboto', sans-serif;
@@ -48,7 +45,7 @@ body {
 }
 
 .nav-main ul li a:hover {
-    color: greenyellow;
+    color: rgb(3, 128, 10);
 }
 
 .nav-main ul.nav-menu {
