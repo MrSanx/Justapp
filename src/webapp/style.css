@@ -1,8 +1,6 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 
 body {
@@ -35,6 +33,7 @@ body {
 }
 
 .nav-brand {
+    align-items: center;
     height: 45px;
     margin-left: 20px;
     margin-right: 20px;
@@ -59,54 +58,80 @@ body {
 .nav-main ul.nav-menu {
     flex: 1;
     margin-left: 20px;
+    
+}   
+.cover{
+    min-height: calc(100vh - 211px - 472px);
 }
 
-/*:root {
+footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(9, 196, 65, 0.87);
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    color: black;
+    text-align: center;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: center;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 20px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 2rem;
+    transition: color .4s ease;
 
-    Colors:
-    --azul: #2C6AB2;
-    --griso: #707070;
-    --gris: #989898;
-    --azulc: #989CFF;
-    --negro: #000000;
-    --blanco: #FFFFFF;
-    
-    Font/text values
-    --unnamed-font-family-times-new-roman: Times;
-    --unnamed-font-family-myanmar-text: Myanmar Text;
-    --unnamed-font-style-normal: normal;
-    --unnamed-font-weight-900: 900px;
-    --unnamed-font-weight-bold: bold;
-    --unnamed-font-weight-normal: normal;
-    --unnamed-font-size-19: 19px;
-    --unnamed-font-size-30: 15px;
-    --unnamed-font-size-40: 40px;
-    --unnamed-character-spacing-0: 0px;
-    --unnamed-line-spacing-26: 26px;
-    --unnamed-line-spacing-34: 34px;
-    --unnamed-line-spacing-54: 54px;
-    --unnamed-line-spacing-56: 56px;
-    --unnamed-text-transform-titlecase: titlecase;
-    }
-    
-     Character Styles
-    .iniciar-sesion {
-    font-family: var(--unnamed-font-family-myanmar-text);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-30);
-    line-height: var(--unnamed-line-spacing-56);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--blanco);
-    text-transform: var(--unnamed-text-transform-titlecase);
-    }
-    .menu-link {
-    font-family: var(--unnamed-font-family-times-new-roman);
-    font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-normal);
-    font-size: var(--unnamed-font-size-30);
-    line-height: var(--unnamed-line-spacing-34);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--blanco);
-    text-transform: var(--unnamed-text-transform-titlecase);
-    }
+}
+.socials a:hover i{
+    color: rgba(3, 88, 29, 0.87);
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
