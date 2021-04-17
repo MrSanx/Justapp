@@ -43,15 +43,13 @@
   <div class="body">
     <!--Cover-->
     <div class="cover">
-      <form action="">
+      <form id = 'signup-form'>
         <div class="input-field">
-          <input type="text" id="name" placeholder="Nombre y apellido">
-          <input type="email" id="email" placeholder="Correo electrónico">
-          <input type="password" id="password" placeholder="Contraseña">
+          <input type="text" id="name" placeholder="Nombre y apellido" required />
+          <input type="email" id="signup-email" placeholder="Correo electrónico"required />
+          <input type="password" id="signup-password" placeholder="Contraseña" required />
         </div>
-        <div class="input-field">
           <button class="btn">Registrarse</button>
-        </div>
       </form>
     </div>
 
@@ -112,8 +110,7 @@
     //update firestore settings
     db.settings({ timestampsInSnapshots: true });
   </script>
-  <script src="index.js"></script>
-  <script src="auth.js"></script>
+  <script src="../scripts/auth.js"></script>
 
 </body>
 
