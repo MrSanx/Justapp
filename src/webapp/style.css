@@ -60,13 +60,18 @@ body {
     min-height: calc(100vh - 211px - 472px);
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 /*---Footer---*/
 footer{
     bottom: 0;
     left: 0;
     right: 0;
     height: auto;
-    width: 100vw;
+    width: 98.7vw;
     font-family: "Open Sans";
     padding-top: 40px;
     color: #fff;
