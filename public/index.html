@@ -9,10 +9,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
-
-
-  
   </head>
+  
   <body>
     <h1>JustApp</h1>
 
@@ -34,14 +32,16 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
-    //make database and auth references
+    //make database and authentication references
     const db = firebase.firestore();
     const auth = firebase.auth();
 
     //update firestore settings
     db.settings({timestampsInSnapshots: true});
   </script>
-  <script src= "app.js"></script>
+  <script src= "index.js"></script>
+  <script src= "auth.js"></script>
+
 
   </body>
 </html>
