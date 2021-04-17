@@ -1,0 +1,49 @@
+:root {
+
+    /* Colors: */
+    --azul: #2C6AB2;
+    --griso: #707070;
+    --gris: #989898;
+    --azulc: #989CFF;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    
+    /* Font/text values */
+    --unnamed-font-family-times-new-roman: Times;
+    --unnamed-font-family-myanmar-text: Myanmar Text;
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-900: 900px;
+    --unnamed-font-weight-bold: bold;
+    --unnamed-font-weight-normal: normal;
+    --unnamed-font-size-19: 19px;
+    --unnamed-font-size-30: 15px;
+    --unnamed-font-size-40: 40px;
+    --unnamed-character-spacing-0: 0px;
+    --unnamed-line-spacing-26: 26px;
+    --unnamed-line-spacing-34: 34px;
+    --unnamed-line-spacing-54: 54px;
+    --unnamed-line-spacing-56: 56px;
+    --unnamed-text-transform-titlecase: titlecase;
+    }
+    
+    /* Character Styles */
+    .iniciar-sesion {
+    font-family: var(--unnamed-font-family-myanmar-text);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-30);
+    line-height: var(--unnamed-line-spacing-56);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--blanco);
+    text-transform: var(--unnamed-text-transform-titlecase);
+    }
+    .menu-link {
+    font-family: var(--unnamed-font-family-times-new-roman);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-30);
+    line-height: var(--unnamed-line-spacing-34);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--blanco);
+    text-transform: var(--unnamed-text-transform-titlecase);
+    }
