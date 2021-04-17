@@ -1,6 +1,17 @@
-:root {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
 
-    /* Colors: */
+body{
+    background: black;
+}
+
+
+/*:root {
+
+    Colors:
     --azul: #2C6AB2;
     --griso: #707070;
     --gris: #989898;
@@ -8,7 +19,7 @@
     --negro: #000000;
     --blanco: #FFFFFF;
     
-    /* Font/text values */
+    Font/text values
     --unnamed-font-family-times-new-roman: Times;
     --unnamed-font-family-myanmar-text: Myanmar Text;
     --unnamed-font-style-normal: normal;
@@ -26,7 +37,7 @@
     --unnamed-text-transform-titlecase: titlecase;
     }
     
-    /* Character Styles */
+     Character Styles
     .iniciar-sesion {
     font-family: var(--unnamed-font-family-myanmar-text);
     font-style: var(--unnamed-font-style-normal);
