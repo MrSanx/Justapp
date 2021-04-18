@@ -7,77 +7,93 @@
   <link rel="icon" href="sources\brand.png" type="image/icon type">
   <title>Home | Justapp</title>
   <!-- update the version number as needed -->
-  <script defer src="/__/firebase/8.3.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+  <script src="https://kit.fontawesome.com/3b3e688824.js" crossorigin="anonymous"></script>
   <!--FONTS-->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
     rel="stylesheet">
   <!--CSS-->
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
   <!--Header-->
   <div class="header">
     <nav class="nav-main">
-      <!--Left part-->
-      <div class="left_header">
-
-      </div>
-      <!--Middle part-->
-      <div class="middle_header">
-
-      </div>
-      <!--Right part-->
-      <div class="right_header">
-
-      </div>
+      <!--Left Part-->
+      <a href="index.html">
+        <img src="sources/logo.svg" alt="logo" class="nav-brand">
+      </a>
+      <ul class="nav-menu">
+        <li class="logged-in">
+          <a href="events.html">Eventos</a>
+        </li>
+        <li class = "logged-in">
+          <a href="directory.html">Directorio</a>
+        </li>
+        <li class = "logged-in">
+          <a href="ask.html">Preguntas</a>
+        </li>
+      </ul>
+      <!--Right Part-->
+      <ul class="nav-ini">
+        <li class = "logged-in">
+          <a href="#" id = "logout"> Cerrar Sesión </a>
+        </li>
+        <li class = "logged-out">
+          <a href = "login.html"> Acceder </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="sources/icon_account.png" alt="icon_account" class="nav-brand">
+          </a>
+        </li>
+      </ul>
     </nav>
+    <hr>
   </div>
 
   <!--Body-->
   <div class="body">
     <!--Cover-->
     <div class="cover">
-      <h1>Esto es una prueba</h1>
-      <img src="sources/logo.svg" alt="logo">
-      <img src="sources/1920_Pre.png" alt="prueba">
-    <!--Hotbar-->
-    <div class="hotbar">
-
+      <img src="sources/cover01.png" alt="prueba">
+      <!--Hotbar-->
+      <div class="hotbar">
+      </div>
     </div>
-  </div>
 
-  <!--Foot-->
-  <section class="footer">
+      <!--Footer-->
+      <footer class="footer">
+        <div class="footer_box">
+          <h4>Síguenos</h4>
+          <p>+57 214 124124<br>
+            320 3314999<br>
+            Manolito@empresa.com</p>
+          <ul class="social">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">&copy; 2021 | JustApp</div>
+        </div>
+      </footer>
 
-  </section>
+  <script src="../scripts/init.js"></script>
+  <script type = "module" src="../scripts/logout.js"></script>
+  <script src="../scripts/index.js"></script>
+  <script type = "module" src="../scripts/authStatus.js"></script>
+  
+  
 
-  <!--Natalia old sacred text-->
-  <!--<header class="page-head">
-    <a href="#" class="logo">
-      <img src="logo.svg" alt="logo">
-
-    </a>
-    <nav class="menu">
-      <a href="#" class="menu-link">Eventos</a>
-      <a href="#" class="menu-link">Directorio</a>
-      <a href="#" class="menu-link">Preguntas</a>
-      <a href="iniciosesion.html" class="iniciar-sesion">Acceder</a>
-    </nav>
-  </header>
-
-  <main class="page-container">
-
-    <article class="page">
-
-      <img src="primera foto@2x.png" class="featured-image">
-    </article>
-  </main>-->
-
-  <script src="../scripts/test.js"></script>
+    
 
 </body>
 
