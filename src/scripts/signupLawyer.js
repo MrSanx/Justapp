@@ -10,9 +10,11 @@ signupForm.addEventListener('submit', (e) => {
 
     //user sign up
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        return db.collection('clients').doc(cred.user.uid).set({
+        return db.collection('lawyers').doc(cred.user.uid).set({
             name: signupForm['signup-name'].value,
-            lastName: signupForm['signup-lastName'].value
+            lastName: signupForm['signup-lastName'].value,
+            professionalCard: signupForm['signup-professionalCard'].value,
+            phone: signupForm['signup-phone'].value
         });
     }).then(() => {
         //what happens when the user signs up
