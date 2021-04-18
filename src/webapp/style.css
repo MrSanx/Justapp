@@ -88,10 +88,10 @@ a {
     color: #393fff;
 }
 .rectangulo {
-    width: 30%;
+    width: auto;
     height: auto;
     border: 3px solid #00916E;
-    margin: 1rem 20rem 3rem 35%;
+    margin: 1rem 35% 3rem 35%;
     background-color: white;
     text-align: center;
     border-radius: 1.8em;
@@ -100,7 +100,7 @@ a {
 .logo {
     width: 150px;
     height: 150px;
-    margin: 0 0 0 6.5rem;
+    margin: 0 0 0 27%;
 }
 
 .cover-rec {
