@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="sources\brand.png" type="image/icon type">
-  <title>Home | Justapp</title>
+  <title>Abogados | Justapp</title>
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/8.3.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
@@ -22,51 +22,52 @@
   <!--Header-->
   <div class="header">
     <nav class="nav-main">
-      <!--Left part-->
-      <div class="left_header">
-
-      </div>
-      <!--Middle part-->
-      <div class="middle_header">
-
-      </div>
-      <!--Right part-->
-      <div class="right_header">
-
-      </div>
+      <!--Left Part-->
+      <a href="index.html">
+        <img src="sources/logo.svg" alt="logo" class="nav-brand">
+      </a>
     </nav>
+    <hr>
   </div>
 
   <!--Body-->
   <div class="body">
     <!--Cover-->
     <div class="cover">
-      <h1>Esto es una prueba</h1>
-      <img src="sources/logo.svg" alt="logo">
-      <img src="sources/1920_Pre.png" alt="prueba">
-    <!--Hotbar-->
-    <div class="hotbar">
-
+      <form id = 'signup-form'>
+        <div class="input-field">
+          <h3>REGISTRAR ABOGADO</h3>
+          <h4>Datos Usuario</h4>
+          <input type="text" id="signup-name" placeholder="Nombres" required />
+          <input type="text" id="signup-lastName" placeholder="Apellido" required />
+          <input type="email" id="signup-email" placeholder="Correo electrónico"required />
+          <input type="password" id="signup-password" placeholder="Contraseña" required />
+          <h4>Datos Abogado</h4>
+          <input type="password" id="signup-card" placeholder="Tarjeta profesional" required />
+          <input type="password" id="signup-phone" placeholder="Teléfono" required />
+          <h6>Al confirmar usted acepta los términos y condiciones de JustApp</h6>
+        </div>
+          <button class="btn-choice">Registrarse</button>
+      </form>
     </div>
   </div>
 
-  <!--Foot-->
   <!--Footer-->
-  <footer class="page-footer green">
-    <div class="container2">
+  <footer class="footer">
+    <div class="footer_box">
       <h4>Síguenos</h4>
-        <p>+57 214 124124<br>
-          320 3314999<br>
-          Manolito@empresa.com</p>
-      <ul class="socials">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      <p>+57 214 124124<br>
+        320 3314999<br>
+        Manolito@empresa.com</p>
+      <ul class="social">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
       </ul>
     </div>
-    <div class="footer-copyright black">
+    <div class="footer-copyright">
       <div class="container">&copy; 2021 | JustApp</div>
     </div>
   </footer>
