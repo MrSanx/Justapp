@@ -17,5 +17,9 @@
       const db = firebase.firestore();
       const auth = firebase.auth();
 
+
       //update firestore settings
       db.settings({ timestampsInSnapshots: true });
+
+      //export references to use globally
+      export {db,auth};

@@ -9,8 +9,7 @@ auth.onAuthStateChanged(user =>{
     }
 });
 */
-
-
+import {auth,db} from './init.js';
 //signup
 const signupForm = document.querySelector('#signup-form');
 signupForm.addEventListener('submit', (e) => {
