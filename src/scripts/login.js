@@ -8,7 +8,6 @@ loginForm.addEventListener('submit', (e) => {
     const password = loginForm['login-password'].value;
 
     auth.signInWithEmailAndPassword(email, password).then(cred =>{
-        console.log('user logged in');
         window.location.href = '../webapp/index.html';
     });
 });
