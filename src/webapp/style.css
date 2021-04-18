@@ -9,6 +9,10 @@ body {
     background: #f6f6f6;
 }
 
+.bodyy {
+    min-height: 1500px;
+}
+
 a {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -52,7 +56,8 @@ a {
 /*--HEADER--*/
 
 .header {
-    background-color: #00916E;
+    background: rgb(0, 145, 110);
+    background: linear-gradient(90deg, rgba(0, 145, 110, 1) 0%, rgba(9, 130, 101, 1) 66%, rgba(7, 117, 91, 1) 100%);
     top: 0;
     position: sticky;
     width: 100%;
@@ -177,7 +182,7 @@ a {
 .action .menu ul li {
     list-style: none;
     padding: 10px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid black;
     display: flex;
     align-items: center;
 }
@@ -208,7 +213,7 @@ a {
 /*--FOOTER--*/
 
 footer {
-    background: #00916E;
+    background: linear-gradient(to bottom, #00916E, #00755a);
     width: 100%;
     font-family: "Open Sans";
     color: white;
@@ -221,16 +226,16 @@ footer {
 }
 
 .footer_box h4 {
-    font-size: 40px;
-    line-height: 70px;
+    font-size: 35px;
+    line-height: 50px;
     color: white;
     text-align: center;
 }
 
 .footer_box p {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: 28px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 30px;
     font-size: 17px;
     text-align: center;
 }
@@ -240,7 +245,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
+    margin: 10px 10px;
 }
 
 .social li {
@@ -278,9 +283,20 @@ footer {
 
 /*-HOME-*/
 
+.cover {
+    background-color: #e1e1e1;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='20' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.56' fill-rule='evenodd'%3E%3Cpath d='M8 0v20L0 10M16 0v10L8 0M16 10v10H8'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 .cover img {
     margin-left: 15%;
     width: 70%;
+}
+
+.hotbar{
+    min-height: 200px;
+    background-color: #e1e1e1;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='20' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.56' fill-rule='evenodd'%3E%3Cpath d='M8 0v20L0 10M16 0v10L8 0M16 10v10H8'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .cover h6 {
