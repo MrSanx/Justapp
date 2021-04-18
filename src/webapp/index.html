@@ -31,23 +31,35 @@
         <li class="logged-in">
           <a href="events.html">Eventos</a>
         </li>
-        <li class = "logged-in">
+        <li class="logged-in">
           <a href="directory.html">Directorio</a>
         </li>
-        <li class = "logged-in">
+        <li class="logged-in">
           <a href="ask.html">Preguntas</a>
         </li>
       </ul>
       <!--Right Part-->
       <ul class="nav-ini">
-        <li class = "logged-out">
-          <a href = "login.html"> Acceder </a>
+        <li class="logged-out">
+          <a href="login.html"> Acceder </a>
         </li>
         <li>
-          <a href="#">
-            <img src="sources/icon_account.png" alt="icon_account" class="nav-brand">
-          </a>
-        </li>
+          <div class="action">
+            <div class="profile" onclick="menuToggle();">
+              <img src="sources/icon_account.png">
+            </div>
+            <div class="menu">
+              <h3>Username<br><span>manolito@gmail.com</span></h3>
+              <ul>
+                <li><img src="sources/user.png"><a href="#">Perfil</a></li>
+                <li><img src="sources/edit.png"><a href="#">Editar perfil</a></li>
+                <li><img src="sources/chat.png"><a href="#">Enviar Comentarios</a></li>
+                <li><img src="sources/settings.png"><a href="#">Configuración</a></li>
+                <li><img src="sources/question.png"><a href="#">Ayuda</a></li>
+                <li><img src="sources/sign-out.png"><a href="#" id="logout">Cerrar Sesión</a></li>
+              </ul>
+            </div>
+          </div>
       </ul>
     </nav>
     <hr>
@@ -59,59 +71,44 @@
     <div class="cover">
       <img src="sources/cover01.png" alt="prueba">
       <!--Hotbar-->
-      <div class="action">
-        <div class="profile" onclick="menuToggle();">
-          <img src="sources/icon_account.png">
-        </div>
-        <div class="menu">
-          <h3>Username<br><span>manolito@gmail.com</span></h3>
-          <ul>
-            <li><img src="sources/user.png"><a href="#">Perfil</a></li>
-            <li><img src="sources/edit.png"><a href="#">Editar perfil</a></li>
-            <li><img src="sources/chat.png"><a href="#">Enviar Comentarios</a></li>
-            <li><img src="sources/settings.png"><a href="#">Configuración</a></li>
-            <li><img src="sources/question.png"><a href="#">Ayuda</a></li>
-            <li><img src="sources/sign-out.png"><a href="#" id="logout">Cerrar Sesión</a></li>
-          </ul>
-        </div>
-      </div>
+
     </div>
 
-      <!--Footer-->
-      <footer class="footer">
-        <div class="footer_box">
-          <h4>Síguenos</h4>
-          <p>+57 214 124124<br>
-            320 3314999<br>
-            Manolito@empresa.com</p>
-          <ul class="social">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-          </ul>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">&copy; 2021 | JustApp</div>
-        </div>
-      </footer>
+    <!--Footer-->
+    <footer class="footer">
+      <div class="footer_box">
+        <h4>Síguenos</h4>
+        <p>+57 214 124124<br>
+          320 3314999<br>
+          Manolito@empresa.com</p>
+        <ul class="social">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">&copy; 2021 | JustApp</div>
+      </div>
+    </footer>
 
 
-  <script>
-    function menuToggle(){
-      const toggleMenu = document.querySelector('.menu');
-      toggleMenu.classList.toggle('active');
-    }
-  </script>
+    <script>
+      function menuToggle() {
+        const toggleMenu = document.querySelector('.menu');
+        toggleMenu.classList.toggle('active');
+      }
+    </script>
 
-  <script src="../scripts/init.js"></script>
-  <script type = "module" src="../scripts/logout.js"></script>
-  <script src="../scripts/index.js"></script>
-  <script type = "module" src="../scripts/authStatus.js"></script>
-  
+    <script src="../scripts/init.js"></script>
+    <script type="module" src="../scripts/logout.js"></script>
+    <script src="../scripts/index.js"></script>
+    <script type="module" src="../scripts/authStatus.js"></script>
 
-    
+
+
 
 </body>
 
