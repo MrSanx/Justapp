@@ -1,4 +1,4 @@
-/*GENERAL*/
+/*--GENERAL--*/
 
 * {
     margin: 0;
@@ -13,123 +13,6 @@ a {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     color: white;
-}
-
-/*--HEADER--*/
-
-.header {
-    background-color: #00916E;
-    width: 100%;
-    margin: auto;
-}
-
-.nav-main {
-    font-size: 17px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 20px;
-    padding: 20px 0;
-}
-
-.nav-main a {
-    font-size: large;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.nav-main ul {
-    display: flex;
-}
-
-.nav-main ul li {
-    display: flex;
-    align-items: center;
-}
-
-.nav-main ul li a:hover {
-    color: rgba(3, 88, 29, 0.87);
-}
-
-.nav-main ul.nav-menu {
-    flex: 1;
-    margin-left: 20px;
-}
-
-.nav-main ul.nav-ini {
-    margin: 0 0 0 0;
-}
-
-.nav-main ul.nav-ini li.logged-out {
-    margin: auto;
-}
-
-.nav-main ul.nav-ini li.logged-in {
-    margin: auto;
-}
-
-.nav-brand {
-    height: 45px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-/*--PAGE--*/
-
-/*-HOME-*/
-
-.cover img {
-    margin-left: 15%;
-    width: 70%;
-}
-.cover h6{
-    color: #393fff;
-}
-.rectangulo {
-    width: auto;
-    height: auto;
-    border: 3px solid #00916E;
-    margin: 1rem 35% 3rem 35%;
-    background-color: white;
-    text-align: center;
-    border-radius: 1.8em;
-}
-
-.logo {
-    width: 150px;
-    height: 150px;
-    margin: auto;
-}
-
-.cover-rec {
-    width: 100%;
-    height: 100px;
-    background-color: #e3edee;
-    border: none;
-    border-bottom: 2px solid #00916E;
-    border-radius: 1.8em;
-}
-
-input[type=email] {
-    border: none;
-    border-bottom: 2px solid #00916E;
-    margin: 1rem;
-    width: 200px;
-}
-
-input[type=password] {
-    border: none;
-    border-bottom: 2px solid #00916E;
-    margin: 1rem;
-    width: 200px;
-}
-input[type=text] {
-    border: none;
-    border-bottom: 2px solid #00916E;
-    margin: 1rem;
-    width: 200px;
 }
 
 /*-BOTONES- */
@@ -166,36 +49,88 @@ input[type=text] {
     color: white;
 }
 
-/*-USER BAR-*/
+/*--HEADER--*/
 
-.action {
-    position: fixed;
-    top: 20px;
-    right: 30px;
+.header {
+    background-color: #00916E;
+    top: 0;
+    position: sticky;
+    width: 100%;
+    height: 60px;
 }
 
+.nav {
+    align-items: center;
+}
+
+.nav img {
+    height: 55px;
+}
+
+.nav a {
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.nav ul li a:hover {
+    color: rgba(3, 88, 29, 0.87);
+}
+
+.nav ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.nav-main ul.nav-ini {
+    margin: 0 0 0 0;
+}
+
+.nav .left_header {
+    margin: 0px 40px;
+    float: left;
+    display: flex;
+}
+
+.nav .left_header .header_hyperlink {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.nav .right_header {
+    margin: 0px 40px;
+    float: right;
+}
+
+.nav .right_header .nav-ini {
+    display: flex;
+    align-items: center;
+}
+
+/*-USER BAR-*/
+
 .action .profile {
-    position: relative;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
+    align-items: center;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
 }
 
 .action .profile img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .action .menu {
     position: absolute;
     top: 80px;
-    right: -10px;
+    right: 30px;
     padding: 10px 20px;
     background: white;
     width: 200px;
@@ -207,7 +142,6 @@ input[type=text] {
 }
 
 .action .menu.active {
-    top: 80px;
     visibility: visible;
     opacity: 1;
 }
@@ -250,6 +184,7 @@ input[type=text] {
 
 .action .menu ul li img {
     max-width: 20px;
+    max-height: 20px;
     margin-right: 10px;
     opacity: 0.5;
     transition: 0.5s;
@@ -339,3 +274,61 @@ footer {
     text-transform: capitalize;
 }
 
+/*--PAGE--*/
+
+/*-HOME-*/
+
+.cover img {
+    margin-left: 15%;
+    width: 70%;
+}
+
+.cover h6 {
+    color: #393fff;
+}
+
+.rectangulo {
+    width: auto;
+    height: auto;
+    border: 3px solid #00916E;
+    margin: 1rem 35% 3rem 35%;
+    background-color: white;
+    text-align: center;
+    border-radius: 1.8em;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.cover-rec {
+    width: 100%;
+    height: 100px;
+    background-color: #e3edee;
+    border: none;
+    border-bottom: 2px solid #00916E;
+    border-radius: 1.8em;
+}
+
+input[type=email] {
+    border: none;
+    border-bottom: 2px solid #00916E;
+    margin: 1rem;
+    width: 200px;
+}
+
+input[type=password] {
+    border: none;
+    border-bottom: 2px solid #00916E;
+    margin: 1rem;
+    width: 200px;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid #00916E;
+    margin: 1rem;
+    width: 200px;
+}

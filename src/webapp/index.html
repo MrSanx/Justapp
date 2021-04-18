@@ -22,28 +22,34 @@
 <body>
   <!--Header-->
   <div class="header">
-    <nav class="nav-main">
+    <nav class="nav">
       <!--Left Part-->
-      <a href="index.html">
-        <img src="sources/logo.svg" alt="logo" class="nav-brand">
-      </a>
-      <ul class="nav-menu">
-        <li class="logged-in">
-          <a href="events.html">Eventos</a>
-        </li>
-        <li class="logged-in">
-          <a href="directory.html">Directorio</a>
-        </li>
-        <li class="logged-in">
-          <a href="ask.html">Preguntas</a>
-        </li>
-      </ul>
+      <div class="left_header">
+        <a href="index.html">
+          <img src="sources/logo.svg" alt="logo" class="nav-brand">
+        </a>
+        <ul class="header_hyperlink">
+          <li class="logged-in">
+            <a href="events.html">Eventos</a>
+          </li>
+          <li class="logged-in">
+            <a href="directory.html">Directorio</a>
+          </li>
+          <li class="logged-in">
+            <a href="ask.html">Preguntas</a>
+          </li>
+        </ul>
+      </div>
       <!--Right Part-->
-      <ul class="nav-ini">
-        <li class="logged-out">
-          <a href="login.html"> Acceder </a>
-        </li>
-        <li>
+      <div class="right_header">
+        <ul class="nav-ini">
+          <li class="logged-out">
+            <a href="login.html"> Iniciar sesión </a>
+          </li>
+          <li class="logged-in">
+            <a href="login.html"> Cerrar sesión </a>
+          </li>
+
           <div class="action">
             <div class="profile" onclick="menuToggle();">
               <img src="sources/icon_account.png">
@@ -60,7 +66,8 @@
               </ul>
             </div>
           </div>
-      </ul>
+        </ul>
+      </div>
     </nav>
     <hr>
   </div>
