@@ -1,14 +1,3 @@
-//listen for authentication status changes
-/*
-auth.onAuthStateChanged(user =>{
-    if(user){
-        console.log('El usuario inició sesión ', user);
-    }   
-    else{
-        console.log('El usuario cerró sesión');
-    }
-});
-*/
 import {auth,db} from './init.js';
 //signup
 const signupForm = document.querySelector('#signup-form');
@@ -30,19 +19,3 @@ signupForm.addEventListener('submit', (e) => {
         signupForm.reset();
     });
 });
-
-
-/*
-//login
-const loginForm = document.querySelector('INSERTAR EL ID DEL FORM DE LOGIN');
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    //get user info
-    const email = loginForm['INSERTAR EL ID DEL CAMPO DE TEXTO DEL EMAIL'].value;
-    const password = loginForm['INSERTAR EL ID DEL CAMPO DE TEXTO DE LA CONTRASEÑA'].value;
-
-    auth.signInWithEmailAndPassword(email, password).then(cred =>{
-        //what happens when the user logs in
-    });
-});
-*/
