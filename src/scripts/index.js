@@ -1,5 +1,6 @@
 const loggedOutLinks = document.querySelectorAll('.logged-out');
-const loggedInLinks = document.querySelectorAll('.logged-in')
+const loggedInLinks = document.querySelectorAll('.logged-in');
+const accountDetails = document.querySelector('.menu-email');
 
 
 const setupUI = (user) => {
