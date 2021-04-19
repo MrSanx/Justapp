@@ -12,6 +12,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
   <script src="https://kit.fontawesome.com/3b3e688824.js" crossorigin="anonymous"></script>
   <!--FONTS-->
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
     rel="stylesheet">
   <!--CSS-->
@@ -42,6 +43,10 @@
       <!--Right Part-->
       <div class="right_header">
         <ul class="nav-ini">
+          <li class="logged-out">
+            <a href="login.html"> Iniciar sesión </a>
+          </li>
+
           <div class="logged-in">
             <div class="action">
               <div class="profile" onclick="menuToggle();">
@@ -64,6 +69,27 @@
       </div>
     </nav>
     <hr>
+  </div>
+
+  <div class ="container">
+    <!--
+    ID a buscar : <input type="text" id="search" placeholder="id a buscar" required />
+    <button onclick="buscarAbogado();"  id="x" >Buscar</button> -->
+    <p id="dato1"> Datos del abogado </p> 
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th> 
+          <th scope="col">Apellido</th>
+          <th scope="col">Tarjeta profesional</th>
+          <th scope="col">Celular</th>
+        </tr>
+      </thead>
+      <tbody id="tabla">
+      
+        
+      </tbody>
+    </table>
   </div>
 
   <!--Body-->
@@ -97,11 +123,8 @@
       toggleMenu.classList.toggle('active');
     }
   </script>
-
-  <script src="../scripts/init.js"></script>
-  <script type="module" src="../scripts/logout.js"></script>
+  <script type= "module" src="../scripts/directory.js"></script>
   <script src="../scripts/index.js"></script>
-  <script type="module" src="../scripts/authStatus.js"></script>
 
 </body>
 
