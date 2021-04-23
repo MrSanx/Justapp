@@ -1,4 +1,22 @@
 import {db} from './init.js';
+
+const tabla = document.querySelector('#tabla');
+
+function renderLawyer(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let phone = document.createElement ('span');
+
+    li.setAttribute('data-id', doc.id);
+    name.textContent = doc.data().name + " " + doc.data().lastName;
+    phone.textContent = doc.data().phone;
+
+    li.appendChild(name);
+    li.appendChild(phone);
+
+    tabla.appendChild(li);
+}
+
 //Search a specific lawyer
 var lawyers=[];
 function Lawyer (name, lastName,professionalCard,phone)
@@ -9,21 +27,20 @@ function Lawyer (name, lastName,professionalCard,phone)
     this.phone=phone;
 }
 
-
 //Mostrar todos los abogados
-var tabla = document.getElementById('tabla');
 db.collection("lawyers").onSnapshot((querySnapshot) => {
     tabla.innerHTML='';
     querySnapshot.forEach((doc) => {
+        renderLawyer(doc);
         //console.log(`${doc.uid} => ${doc.data()}`);
-        tabla.innerHTML+=`
+        /*tabla.innerHTML+=`
         <tr>
         <td>${doc.data().name}</td>
         <td>${doc.data().lastName}</td>
         <td>${doc.data().professionalCard}</td>
         <td>${doc.data().phone}</td>
       </tr>
-      `
+      `*/
     });
 });
 

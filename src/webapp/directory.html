@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="sources\brand.png" type="image/icon type">
-  <title>Home | Justapp</title>
+  <title>Directory | Justapp</title>
   <!-- update the version number as needed -->
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
@@ -21,6 +21,7 @@
 
 <body>
   <!--Header-->
+  <!--Header-->
   <div class="header">
     <nav class="nav">
       <!--Left Part-->
@@ -29,13 +30,10 @@
           <img src="sources/logo.svg" alt="logo" class="nav-brand">
         </a>
         <ul class="header_hyperlink">
-          <li class="logged-in">
             <a href="events.html">Eventos</a>
           </li>
-          <li class="logged-in">
             <a href="directory.html">Directorio</a>
           </li>
-          <li class="logged-in">
             <a href="ask.html">Preguntas</a>
           </li>
         </ul>
@@ -43,17 +41,13 @@
       <!--Right Part-->
       <div class="right_header">
         <ul class="nav-ini">
-          <li class="logged-out">
-            <a href="login.html"> Iniciar sesión </a>
-          </li>
-
           <div class="logged-in">
             <div class="action">
               <div class="profile" onclick="menuToggle();">
                 <img src="sources/icon_account.png">
               </div>
               <div class="menu">
-                <h3>Username<br><span>manolito@gmail.com</span></h3>
+                <h3>Usuario<br><div class="menu-email"><span></span></div></h3>
                 <ul>
                   <li><img src="sources/user.png"><a href="#">Perfil</a></li>
                   <li><img src="sources/edit.png"><a href="#">Editar perfil</a></li>
@@ -70,30 +64,20 @@
     </nav>
     <hr>
   </div>
-
-  <div class ="container">
-    <!--
-    ID a buscar : <input type="text" id="search" placeholder="id a buscar" required />
-    <button onclick="buscarAbogado();"  id="x" >Buscar</button> -->
-    <p id="dato1"> Datos del abogado </p> 
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Nombre</th> 
-          <th scope="col">Apellido</th>
-          <th scope="col">Tarjeta profesional</th>
-          <th scope="col">Celular</th>
-        </tr>
-      </thead>
-      <tbody id="tabla">
-      
-        
-      </tbody>
-    </table>
-  </div>
-
   <!--Body-->
   <div class="bodyy">
+      <!--
+      ID a buscar : <input type="text" id="search" placeholder="id a buscar" required />
+      <button onclick="buscarAbogado();"  id="x" >Buscar</button> -->
+      <h1> Nuestros abogados </h1>
+      <div class ="content">
+        <table class="table">
+          <ul id="tabla">
+          
+          
+          </ul>
+        </table>
+    </div>
   </div>
 
   <!--Footer-->

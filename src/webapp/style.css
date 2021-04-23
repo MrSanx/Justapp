@@ -13,6 +13,12 @@ body {
     min-height: calc(100vh - 60px - 254.67);
 }
 
+.bodyy h1{
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
 a {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -282,6 +288,55 @@ footer {
     text-align: center;
 }
 /*--PAGE--*/
+
+.content{
+    background: #fff;
+    max-width: 960px;
+    margin: 30px auto;
+    padding:  20px 30px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
+}
+.content ul{
+    
+    list-style-type: none;
+    padding: 0;
+}
+.content li{
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 2px solid #cecccc;
+    height: auto;
+}
+.content li:nth-child(even){
+    padding: 20px;
+    background: #f6f6f6;
+}
+
+.content li span{
+    display: block;
+}
+
+.content li span:nth-child(2){
+    font-size: 16px;
+    margin-top: 6px;
+    color: #999;
+}
+
+.content li div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255,255,255,0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}
 
 /*-HOME-*/
 
