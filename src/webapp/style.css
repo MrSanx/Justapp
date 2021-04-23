@@ -184,9 +184,9 @@ a {
     line-height: 1.2em;
 }
 
-.action .menu h3 span {
+.action .menu .menu-email {
     font-size: 14px;
-    color: #cecece;
+    color: #8f8c8c;
     font-weight: 400;
 }
 
@@ -215,6 +215,8 @@ a {
     text-decoration: none;
     color: #555;
     transition: 0.5s;
+    font-weight: 400;
+    font-size: 15px;
 }
 
 .acion .menu ul li:hover a {
