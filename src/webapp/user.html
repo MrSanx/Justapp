@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="sources\brand.png" type="image/icon type">
+  <title>Home | Justapp</title>
+  <!-- update the version number as needed -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+  <script src="https://kit.fontawesome.com/3b3e688824.js" crossorigin="anonymous"></script>
+  <!--FONTS-->
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet">
+  <!--CSS-->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--Header-->
+  <div class="header">
+    <nav class="nav">
+      <!--Left Part-->
+      <div class="left_header">
+        <a href="index.html">
+          <img src="sources/logo.svg" alt="logo" class="nav-brand">
+        </a>
+        <ul class="header_hyperlink">
+          <li class="logged-in">
+            <a href="events.html">Eventos</a>
+          </li>
+          <li class="logged-in">
+            <a href="directory.html">Directorio</a>
+          </li>
+          <li class="logged-in">
+            <a href="ask.html">Preguntas</a>
+          </li>
+        </ul>
+      </div>
+      <!--Right Part-->
+      <div class="right_header">
+        <ul class="nav-ini">
+          <li class="logged-out">
+            <a href="login.html"> Iniciar sesión </a>
+          </li>
+
+          <div class="logged-in">
+            <div class="action">
+              <div class="profile" onclick="menuToggle();">
+                <img src="sources/icon_account.png">
+              </div>
+              <div class="menu">
+                <h3>Usuario<br>
+                  <div class="menu-email"><span></span></div>
+                </h3>
+                <ul>
+                  <li><img src="sources/user.png"><a href="user.html">Perfil</a></li>
+                  <li><img src="sources/edit.png"><a href="userSettings.html">Editar perfil</a></li>
+                  <li><img src="sources/chat.png"><a href="messages.html">Enviar Comentarios</a></li>
+                  <li><img src="sources/settings.png"><a href="generalSettings.html">Configuración</a></li>
+                  <li><img src="sources/question.png"><a href="forumGeneral.html">Ayuda</a></li>
+                  <li><img src="sources/sign-out.png"><a href="index.html" id="logout">Cerrar Sesión</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </nav>
+    <hr>
+  </div>
+
+  <!--Body-->
+  <div class="bodyy">
+    <!--Todas las clases a partir de aqui son temporales o no existentes, esto para darle al menos algún tipo de contexto-->
+    <div class="cover">
+      <div class="rectangulo">
+        <!--User-->
+        <div>
+          <div>
+            <img src="sources/userPhoto.jpg" alt="userPhoto">
+          </div>
+          <div>
+            <h1>Martin</h1>
+            <h1>Elias</h1>
+            <h2>Profession: "Abogado"</h2>
+            <h2>City: "Bogota Dc"</h2>
+            <hr style="width:80%; margin-left: 10%;">
+            <p>Soy abogado desde hace 30 años, cuando
+              niño me encantaba hacer justicia y eso me hizo
+              perfecto para evadir impuestos, soy
+              estadounidense y cobro barato, que mejor abogado
+              puedes conseguir, contrátame ya! </p>
+          </div>
+          <h2>Objective area: "Robo de identidad"</h2>
+          <div class="star"><img src="sources/iconnb_star.png" alt=""></div>
+          <h4>3 reseñas</h4>
+        </div>
+        <br>
+        <hr style="width:100%; height: 10px; background-color:black">
+        <br>
+        <!--Reviews-->
+        <!--Aqui se supone que se debería comprobar el tipo de usuario, si es un abogado mostrara las reviews del publico y 
+          si es un cliente la de los abogados, en caso de no tener nada debería mostrar algo tipo: "Este usuario no tiene reviews :p"-->
+        <div>
+          <div class="review">
+            <img src="sources/userPhoto.jpg" alt="UserPhoto">
+            <h1>Marco Antonio Franco</h1>
+            <!--La verdad es que no se como hacer lo de si tiene 3 estrellas poner... 3 estrellas o 3.5 así que esto es temporal-->
+            <div>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <h2>Title</h2>
+            <p>Hola buenas que buen servicio ajja salu2</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer">
+      <div class="footer_box">
+        <h4>Síguenos</h4>
+        <p>+57 214 124124<br>
+          320 3314999<br>
+          Manolito@empresa.com</p>
+        <ul class="social">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">&copy; 2021 | JustApp</div>
+      </div>
+    </footer>
+
+
+    <script>
+      function menuToggle() {
+        const toggleMenu = document.querySelector('.menu');
+        toggleMenu.classList.toggle('active');
+      }
+    </script>
+
+    <script src="../scripts/init.js"></script>
+    <script type="module" src="../scripts/logout.js"></script>
+    <script src="../scripts/index.js"></script>
+    <script type="module" src="../scripts/authStatus.js"></script>
+
+</body>
+
+</html>
