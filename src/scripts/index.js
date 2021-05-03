@@ -2,7 +2,7 @@ import {db} from './init.js';
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const menuEmail = document.querySelector('.menu-email');
-const userName = document.querySelector('#user-name');
+const menuName = document.querySelector('.menu-name');
 
 
 export const setupUI = (user) => {
@@ -12,11 +12,11 @@ export const setupUI = (user) => {
             const htmlEmail = `
                 <div>${user.email}</div>
             `;
-            const htmlUserName = `
+            const htmlMenuName = `
                 <div>${doc.data().name + ' ' + doc.data().lastName}</div>
             `;
             menuEmail.innerHTML = htmlEmail;
-            userName.innerHTML = htmlUserName;
+            menuName.innerHTML = htmlMenuName;
         }).catch(err => {
             console.error()
         })
