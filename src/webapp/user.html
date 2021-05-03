@@ -12,7 +12,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
   <script src="https://kit.fontawesome.com/3b3e688824.js" crossorigin="anonymous"></script>
   <!--FONTS-->
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <!--<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>-->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
     rel="stylesheet">
   <!--CSS-->
@@ -81,11 +81,12 @@
         <!--User-->
         <div>
           <div>
-            <img src="sources/userPhoto.jpg" alt="userPhoto">
+            <!--<img src="sources/userPhoto.jpg" alt="userPhoto">-->
           </div>
-          <div>
-            <h1>Martin</h1>
-            <h1>Elias</h1>
+
+          <div id="user-name"></div>
+
+          <div id="user-description">
             <h2>Profession: "Abogado"</h2>
             <h2>City: "Bogota Dc"</h2>
             <hr style="width:80%; margin-left: 10%;">
@@ -95,6 +96,7 @@
               estadounidense y cobro barato, que mejor abogado
               puedes conseguir, contrátame ya! </p>
           </div>
+          
           <h2>Objective area: "Robo de identidad"</h2>
           <div class="star"><img src="sources/iconnb_star.png" alt=""></div>
           <h4>3 reseñas</h4>
@@ -107,7 +109,7 @@
           si es un cliente la de los abogados, en caso de no tener nada debería mostrar algo tipo: "Este usuario no tiene reviews :p"-->
         <div>
           <div class="review">
-            <img src="sources/userPhoto.jpg" alt="UserPhoto">
+            <!--<img src="sources/userPhoto.jpg" alt="UserPhoto">-->
             <h1>Marco Antonio Franco</h1>
             <!--La verdad es que no se como hacer lo de si tiene 3 estrellas poner... 3 estrellas o 3.5 así que esto es temporal-->
             <div>
@@ -151,9 +153,8 @@
       }
     </script>
 
-    <script src="../scripts/init.js"></script>
     <script type="module" src="../scripts/logout.js"></script>
-    <script src="../scripts/index.js"></script>
+    <script type="module" src="../scripts/index.js"></script>
     <script type="module" src="../scripts/authStatus.js"></script>
 
 </body>
