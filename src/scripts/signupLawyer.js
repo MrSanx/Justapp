@@ -14,7 +14,13 @@ signupForm.addEventListener('submit', (e) => {
             name: signupForm['signup-name'].value,
             lastName: signupForm['signup-lastName'].value,
             professionalCard: signupForm['signup-professionalCard'].value,
-            phone: signupForm['signup-phone'].value
+            phone: signupForm['signup-phone'].value,
+            gender: signupForm['signup-gender'].value,
+            experience: signupForm['signup-experience'].value,
+            position: signupForm['signup-position'].value,
+            workArea: signupForm['signup-workArea'].value,
+            city: signupForm['signup-city'].value,
+            description: signupForm['signup-description'].value
         });
     }).then(() => {
         //what happens when the user signs up
