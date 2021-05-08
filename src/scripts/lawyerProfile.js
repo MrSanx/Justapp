@@ -9,11 +9,11 @@ const description = document.querySelector('#lawyer-description');
 export const setupProfile = (id) => {
     db.collection('lawyers').doc(id).get().then(doc => {
         
-        const htmlName = `<div>${doc.data().name + ' ' + doc.data().lastName}</div>`;
-        const htmlPosition = `<div>${doc.data().position}</div>`;
-        const htmlCity = `<div>${doc.data().city}</div>`;
-        const htmlWorkArea = `<div>${doc.data().workArea}</div>`;
-        const htmlDescription = `<div>${doc.data().description}</div>`;
+        const htmlName = `${doc.data().name + ' ' + doc.data().lastName}`;
+        const htmlPosition = `${doc.data().position}`;
+        const htmlCity = `${doc.data().city}`;
+        const htmlWorkArea = `${doc.data().workArea}`;
+        const htmlDescription = `${doc.data().description}`;
 
         name.innerHTML = htmlName;
         position.innerHTML = htmlPosition;

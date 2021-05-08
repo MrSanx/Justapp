@@ -1,5 +1,7 @@
 import {db} from './init.js';
 import {setupProfile} from './lawyerProfile.js';
+var modal = document.getElementById("profileM");
+var span = document.getElementsByClassName("close")[0];
 
 const tabla = document.querySelector('#tabla');
 
@@ -14,7 +16,8 @@ function renderLawyer(doc){
     name.textContent = doc.data().name + " " + doc.data().lastName;
     phone.textContent = doc.data().phone;
     perfilbtn.textContent = 'Ver más';
-    
+    perfilbtn.setAttribute('href', '#profileM');
+    perfilbtn.setAttribute('class', 'modal-trigger')
 
     li.appendChild(name);
     li.appendChild(phone);
@@ -22,12 +25,18 @@ function renderLawyer(doc){
 
     tabla.appendChild(li);
 
-    //ir al perfil del abogado mediante el boton
     perfilbtn.addEventListener('click', (e) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
         setupProfile(id);
     });
+    perfilbtn.onclick = function() 
+    {
+        modal.style.display = "block";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 }
 
 //Search a specific lawyer
@@ -55,7 +64,7 @@ db.collection("lawyers").onSnapshot((querySnapshot) => {
       </tr>
       `*/
     });
-});
+})
 
 //Buscar abogado
 function buscarAbogado()
