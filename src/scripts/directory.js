@@ -1,4 +1,5 @@
 import {db} from './init.js';
+import {setupProfile} from './lawyerProfile.js';
 
 const tabla = document.querySelector('#tabla');
 
@@ -13,12 +14,20 @@ function renderLawyer(doc){
     name.textContent = doc.data().name + " " + doc.data().lastName;
     phone.textContent = doc.data().phone;
     perfilbtn.textContent = 'Ver más';
+    
 
     li.appendChild(name);
     li.appendChild(phone);
     li.appendChild(perfilbtn);
 
     tabla.appendChild(li);
+
+    //ir al perfil del abogado mediante el boton
+    perfilbtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let id = e.target.parentElement.getAttribute('data-id');
+        setupProfile(id);
+    });
 }
 
 //Search a specific lawyer
