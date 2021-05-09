@@ -20,6 +20,18 @@ export const setupUI = (user) => {
         }).catch(err => {
             console.error()
         })
+        db.collection('lawyers').doc(user.uid).get().then(doc => {
+            const htmlEmail = `
+                <div>${user.email}</div>
+            `;
+            const htmlMenuName = `
+                <div>${doc.data().name + ' ' + doc.data().lastName}</div>
+            `;
+            menuEmail.innerHTML = htmlEmail;
+            menuName.innerHTML = htmlMenuName;
+        }).catch(err => {
+            console.error()
+        })
         //toggle UI elements
         loggedInLinks.forEach(item => item.style.display = 'block');
         loggedOutLinks.forEach(item => item.style.display ='none'); 

@@ -1,9 +1,12 @@
 import {db} from './init.js';
 import {setupProfile} from './lawyerProfile.js';
-var modal = document.getElementById("profileM");
-var span = document.getElementsByClassName("close")[0];
 
-const tabla = document.querySelector('#tabla');
+
+let modal = document.getElementById("profileM");
+let span = document.getElementsByClassName("close")[0];
+var id="nadaporahora";
+
+let tabla = document.querySelector('#tabla');
 
 //Crear nuevo espacio cuando se añade un nuevo abogado
 function renderLawyer(doc){
@@ -27,8 +30,9 @@ function renderLawyer(doc){
 
     perfilbtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        let id = e.target.parentElement.getAttribute('data-id');
+        id = e.target.parentElement.getAttribute('data-id');
         setupProfile(id);
+        console.log(id)
     });
     perfilbtn.onclick = function() 
     {
@@ -37,7 +41,9 @@ function renderLawyer(doc){
     span.onclick = function() {
         modal.style.display = "none";
     }
+
 }
+
 
 //Search a specific lawyer
 var lawyers=[];
@@ -76,3 +82,4 @@ function buscarAbogado()
         });
     });
 }
+export {id};
