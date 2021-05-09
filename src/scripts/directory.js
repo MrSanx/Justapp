@@ -1,10 +1,8 @@
 import {db} from './init.js';
-import {setupProfile} from './lawyerProfile.js';
 
 
 let modal = document.getElementById("profileM");
 let span = document.getElementsByClassName("close")[0];
-var id="nadaporahora";
 
 let tabla = document.querySelector('#tabla');
 
@@ -13,14 +11,14 @@ function renderLawyer(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
     let phone = document.createElement ('span');
-    let perfilbtn = document.createElement ('button');
+    let perfilbtn = document.createElement ('a');
 
     li.setAttribute('data-id', doc.id);
     name.textContent = doc.data().name + " " + doc.data().lastName;
     phone.textContent = doc.data().phone;
     perfilbtn.textContent = 'Ver más';
-    perfilbtn.setAttribute('href', '#profileM');
-    perfilbtn.setAttribute('class', 'modal-trigger')
+    perfilbtn.setAttribute('href', 'lawyerProfile.html');
+    perfilbtn.setAttribute('class', 'btn-choice');
 
     li.appendChild(name);
     li.appendChild(phone);
@@ -30,10 +28,10 @@ function renderLawyer(doc){
 
     perfilbtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        id = e.target.parentElement.getAttribute('data-id');
-        setupProfile(id);
-        console.log(id)
+        let id = e.target.parentElement.getAttribute('data-id');
+        localStorage.setItem('ID', id);
     });
+    /*
     perfilbtn.onclick = function() 
     {
         modal.style.display = "block";
@@ -41,6 +39,7 @@ function renderLawyer(doc){
     span.onclick = function() {
         modal.style.display = "none";
     }
+    */
 
 }
 
@@ -82,4 +81,3 @@ function buscarAbogado()
         });
     });
 }
-export {id};
