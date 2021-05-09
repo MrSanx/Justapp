@@ -12,7 +12,7 @@ export const setupProfile = (id) => {
         const htmlName = `${doc.data().name + ' ' + doc.data().lastName}`;
         const htmlPosition = `${doc.data().position}`;
         const htmlCity = `${doc.data().city}`;
-        const htmlWorkArea = `${doc.data().workArea}`;
+        const htmlWorkArea = `Area objetivo: <br>${doc.data().workArea}`;
         const htmlDescription = `${doc.data().description}`;
 
         name.innerHTML = htmlName;

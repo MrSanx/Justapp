@@ -320,9 +320,9 @@ footer {
     font-weight:  bold;
     cursor:  pointer;
 }
-.content button{    
+.content a{    
     border-radius: 6px;
-    text-align: center;
+    text-align:center;
     display: inline-block;
     font-size: 12px;
     -webkit-transition-duration: 0.4s;
@@ -332,16 +332,15 @@ footer {
     text-decoration: none;
     
 }
-.content button {
+.content a {
     background-color: white;
     color: black;
     border: 2px solid #34b176;
-    width: 80px;
-    height: 30px;
-    margin: 0 0 0 50rem;
+    width: 70px;
+    margin: 0 0 0 52rem;
 }
 
-.content button:hover {
+.content a:hover {
     background-color: #00916E;
     color: white;
 }
@@ -375,14 +374,15 @@ footer {
     text-align: center;
     border-radius: 1.8em;
 }
-/*.rectangulo2 {
-    width: 300px;
-    height:auto;
+.rectanguloZ {
+    width: 900px;
+    height: fit-content;
     border: 3px solid #00916E;
-    margin: 1rem 35% 0 35%;
+    margin: 1rem 0 1rem 15%;
+    background-color: white;
     text-align: center;
-    border-radius: 0.5em;
-}*/
+    border-radius: 1.8em;
+}
 .tablita{
     align-items: center;
     text-align: center;
