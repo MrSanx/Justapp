@@ -31,16 +31,6 @@ function renderLawyer(doc){
         let id = e.target.parentElement.getAttribute('data-id');
         localStorage.setItem('ID', id);
     });
-    /*
-    perfilbtn.onclick = function() 
-    {
-        modal.style.display = "block";
-    }
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-    */
-
 }
 
 
