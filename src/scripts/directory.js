@@ -45,15 +45,6 @@ db.collection("lawyers").onSnapshot((querySnapshot) => {
     tabla.innerHTML='';
     querySnapshot.forEach((doc) => {
         renderLawyer(doc);
-        //console.log(`${doc.uid} => ${doc.data()}`);
-        /*tabla.innerHTML+=`
-        <tr>
-        <td>${doc.data().name}</td>
-        <td>${doc.data().lastName}</td>
-        <td>${doc.data().professionalCard}</td>
-        <td>${doc.data().phone}</td>
-      </tr>
-      `*/
     });
 });
 
