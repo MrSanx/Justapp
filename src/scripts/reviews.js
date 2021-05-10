@@ -1,5 +1,6 @@
 import {db} from './init.js';
 import {setupProfile} from './lawyerProfile.js';
+const reviewForm = document.querySelector('#review-form');
 // Genera perfil
 let id = localStorage.getItem('ID');
 setupProfile(id);
@@ -23,25 +24,55 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-function addReviewAbogado ()
-{
-    id = document.getElementById("abogado");
+reviewForm.addEventListener("submit",(e) => {
+  e.preventDefault();
 
-    db.collection("lawyers").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-           var id2 = doc.id;
-           if(id==id2)
-           {
-            var abogado = document.getElementById("abogado");
-            var review = document.getElementById("review");
-            var arreglo = new reviews (abogado,review);
-            reviews[cantReviews]=arreglo;
-            cantReviews=cantReviews+1;
-            db.collection('reviews').add(review);
-           }
-           else {
-            document.getElementById("dato1").innerHTML="No se pudo encontrar su abogado";
-           }
+  //check selected star
+  const btnStars = document.querySelectorAll('input[name="rate"]');
+  let selectedStar;
+  for(const btn of btnStars){
+    if(btn.checked){
+      selectedStar = btn.value;
+      break;
+    }
+  }
+  //check selected type
+  const btnTypes = document.querySelectorAll('input[name="reviewType"]');
+  let selectedType;
+  for(const type of btnTypes){
+    if(type.checked){
+      selectedType = type.value;
+      break;
+    }
+  }
+  //check if recomended
+
+
+
+  //create review
+  db.collection("lawyers").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+       var id2 = doc.id;
+       if(id==id2)
+       {
+        db.collection('reviews').doc(id).set({
+          title: reviewForm['review-title'].value,
+          stars: selectedStar,
+          type: selectedType,
+
+
+          
         });
+        
+       }
+       else {
+        document.getElementById("dato1").innerHTML="No se pudo encontrar su abogado";
+       }
     });
-}
+});
+
+
+
+})
+
+
