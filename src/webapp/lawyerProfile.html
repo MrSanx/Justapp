@@ -116,12 +116,59 @@
           <!--Reviews-->
           <!--Aqui se supone que se debería comprobar el tipo de usuario, si es un abogado mostrara las reviews del publico y 
             si es un cliente la de los abogados, en caso de no tener nada debería mostrar algo tipo: "Este usuario no tiene reviews :p"-->
-            <div class="review"></div>
+        <div class="review"></div>
         </div>
-        <div class = "modal" id="profileM">
+        <a href="#" class="btn-choice" id="profileM-btn">Abrir modal</a>
+        <div class="modal" id="profileM">
           <div class="modal-content">
+            <!--Ventana emergente-->
             <span class="close">&times;</span>
-            <p>Sanx mete aqui y haz lo tuyo :D</p>
+            <div>
+              <fieldset>
+                <h1>Reseña Abogado</h1>
+                <h2>Nombre</h2>
+                <h3>Compañia-Buffet</h3>
+                <i class="fas fa-map-marked-alt"><label>Ubicación de residencia</label></i><br>
+                <i class="fas fa-briefcase"><label>Profesión y espelización</label></i>
+
+                <h2>Selecciona un rating para el abogado</h2>
+                <div class="rate">
+                  <input type="radio" id="star5" name="rate" value="5" />
+                  <label for="star5" title="text">5 stars</label>
+                  <input type="radio" id="star4" name="rate" value="4" />
+                  <label for="star4" title="text">4 stars</label>
+                  <input type="radio" id="star3" name="rate" value="3" />
+                  <label for="star3" title="text">3 stars</label>
+                  <input type="radio" id="star2" name="rate" value="2" />
+                  <label for="star2" title="text">2 stars</label>
+                  <input type="radio" id="star1" name="rate" value="1" />
+                  <label for="star1" title="text">1 star</label>
+                </div>
+                <div>
+                  <h2>Titulo Reseña</h2>
+                  <input type="text"><br>
+                  <h2>Tipo de reseña</h2>
+                  <input type="radio" id="Consulta" name="tipoReseña" value="Consulta">
+                  <label for="Consulta">Consulta</label><br>
+                  <input type="radio" id="Contrato" name="tipoReseña" value="Contrato">
+                  <label for="Consulta">Contrato</label><br>
+                  <input type="radio" id="Otro" name="tipoReseña" value="Otro">
+                  <label for="Otro">Otro</label>
+                </div>
+                <div>
+                  <h2>Recomiendas este abogado?</h2>
+                  <input type="radio" id="recomiendaSi" name="recomienda" value="recomiendaSi">
+                  <label for="recomiendaSi">Si</label><br>
+                  <input type="radio" id="recomiendaNo" name="recomienda" value="recomiendaNo">
+                  <label for="recomiendaNo">No</label><br>
+                  <h2>Añade un texto contandonos tu experiencia</h2>
+                </div>
+                <h2>Selecci</h2>
+                <textarea id="textBox_Review" name="textBox_Review" rows="5" cols="50"
+                  placeholder="Aqui puedes escribir tu experiencia con el abogado."></textarea>
+                  <a href="#" class="btn-choice" id="profileM-btn">Submit</a>
+              </fieldset>
+            </div>
           </div>
         </div>
 
