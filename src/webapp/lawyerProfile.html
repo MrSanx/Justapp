@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="sources\brand.png" type="image/icon type">
-  <title>Usuario | Justapp</title>
+  <title>Directorio | Justapp</title>
   <!-- update the version number as needed -->
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
@@ -77,120 +77,143 @@
   <div class="bodyy">
     <!--Todas las clases a partir de aqui son temporales o no existentes, esto para darle al menos algún tipo de contexto-->
     <div class="cover">
-        <!--User-->
-        <div class="wrapper">
-          <div class="left">
-            <img src="sources/icon_account.png" alt="user" width="100">
-            <h4 id="lawyer-name"></h4>
-              <p id="lawyer-position"></p>
-          </div>
-          <div class="right">
-            <div class="info">
-              <h3>Información</h3>
-                <div class="info_data">
-                  <div class="data">
-                    <h4>Ciudad de residencia:</h4>
-                      <p id="lawyer-city"></p>
-                  </div>
-                  <div class="data">
-                    <h4>Área objetivo:</h4>
-                      <p id="lawyer-workArea"></p>
-                  </div>
-                </div>
-            </div><!--Cierra info-->
-            <div class="projects">
-              <h3>Descripción</h3>
-              <div class="projects_data">
-                  <div class="data">
-                    <p id="lawyer-description"></p>
-                  </div>
+      <!--User-->
+      <div class="wrapper">
+        <div class="left">
+          <img src="sources/icon_account.png" alt="user" width="100">
+          <h4 id="lawyer-name"></h4>
+          <p id="lawyer-position"></p>
+        </div>
+        <div class="right">
+          <div class="info">
+            <h3>Información</h3>
+            <div class="info_data">
+              <div class="data">
+                <h4>Ciudad de residencia:</h4>
+                <p id="lawyer-city"></p>
               </div>
-            </div><!--Cierra projects-->
-            <div class="openModal">
-              <ul>
-                <li id="profileM-btn">Abrir Modal</li>
-              </ul>
-            </div>
-          </div><!--Cierra zona derecha-->
-          
-          <!--Reviews-->
-          <!--Aqui se supone que se debería comprobar el tipo de usuario, si es un abogado mostrara las reviews del publico y 
-            si es un cliente la de los abogados, en caso de no tener nada debería mostrar algo tipo: "Este usuario no tiene reviews :p"-->
-        <div class="review"></div>
-        </div>
-        <div class="modal" id="profileM">
-          <div class="modal-content">
-            <!--Ventana emergente-->
-            <span class="close">&times;</span>
-            <div>
-              <fieldset>
-                <h1>Reseña Abogado</h1>
-                <h2>Nombre</h2>
-                <h3>Compañia-Buffet</h3>
-                <i class="fas fa-map-marked-alt"><label>Ubicación de residencia</label></i><br>
-                <i class="fas fa-briefcase"><label>Profesión y espelización</label></i>
-                <form id="review-form">
-                  <h2>Selecciona un rating para el abogado</h2>
-                  <div class="rate">
-                    <input type="radio" id="star5" name="rate" value="5" />
-                    <label for="star5" title="text">5 stars</label>
-                    <input type="radio" id="star4" name="rate" value="4" />
-                    <label for="star4" title="text">4 stars</label>
-                    <input type="radio" id="star3" name="rate" value="3" />
-                    <label for="star3" title="text">3 stars</label>
-                    <input type="radio" id="star2" name="rate" value="2" />
-                    <label for="star2" title="text">2 stars</label>
-                    <input type="radio" id="star1" name="rate" value="1" />
-                    <label for="star1" title="text">1 star</label>
-                  </div>
-                  <div>
-                    <h2>Titulo Reseña</h2>
-                    <input type="text" id="review-title"><br>
-                    <h2>Tipo de reseña</h2>
-                    <input type="radio" id="Consulta" name="reviewType" value="Consulta">
-                    <label for="Consulta">Consulta</label><br>
-                    <input type="radio" id="Contrato" name="reviewType" value="Contrato">
-                    <label for="Consulta">Contrato</label><br>
-                    <input type="radio" id="Otro" name="reviewType" value="Otro">
-                    <label for="Otro">Otro</label>
-                  </div>
-                  <div>
-                    <h2>Recomiendas este abogado?</h2>
-                    <input type="radio" id="recomiendaSi" name="recomended" value="Si">
-                    <label for="recomiendaSi">Si</label><br>
-                    <input type="radio" id="recomiendaNo" name="recomended" value="No">
-                    <label for="recomiendaNo">No</label><br>
-                    <h2>Añade un texto contándonos tu experiencia</h2>
-                  </div>
-                  <textarea id="review-experience" name="textBox_Review" rows="5" cols="50"
-                    placeholder="Aqui puedes escribir tu experiencia con el abogado."></textarea>
-                    <button class="btn-choice">Submit</button>
-                </form>
-              </fieldset>
+              <div class="data">
+                <h4>Área objetivo:</h4>
+                <p id="lawyer-workArea"></p>
+              </div>
             </div>
           </div>
+          <!--Cierra info-->
+          <div class="projects">
+            <h3>Descripción</h3>
+            <div class="projects_data">
+              <div class="data">
+                <p id="lawyer-description"></p>
+              </div>
+            </div>
+          </div>
+          <!--Cierra projects-->
+          <div class="openModal">
+            <ul>
+              <li id="profileM-btn">Abrir Modal</li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="modal" id="profileM">
+        <div class="modal-content">
+          <!--Ventana emergente-->
+          <span class="close">&times;</span>
+          <div class="newReview">
+            <h1>Reseña Abogado</h1>
+            <img src="sources/user_example.jpg" alt="icon_account">
+            <h2>Marco Antonio Franco</h2>
+            <h3>Compañia-Buffet</h3>
+            <i class="fas fa-map-marked-alt"><label>Ubicación de residencia</label></i><br>
+            <i class="fas fa-briefcase"><label>Profesión y espelización</label></i>
+            <br><br><br><br><br><br>
+            <hr><br>
+            <form id="review-form">
+              <h2>Selecciona un rating para el abogado</h2>
+              <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+              <br>
+              <h2>Titulo Reseña</h2>
+              <input type="text" id="review-title" class="reviewTitle" placeholder="Titulo"><br>
+              <h2>Tipo de reseña</h2>
+              <div class="tipoReseña">
+                <input type="radio" id="Consulta" name="reviewType" value="Consulta">
+                <label for="Consulta">Consulta</label><br>
+                <input type="radio" id="Contrato" name="reviewType" value="Contrato">
+                <label for="Consulta">Contrato</label><br>
+                <input type="radio" id="Otro" name="reviewType" value="Otro">
+                <label for="Otro">Otro</label>
+              </div>
+              <h2>Recomiendas este abogado?</h2>
+              <div class="tipoReseña">
+                <input type="radio" id="recomiendaSi" name="recomienda" value="recomiendaSi">
+                <label for="recomiendaSi">Si</label><br>
+                <input type="radio" id="recomiendaNo" name="recomienda" value="recomiendaNo">
+                <label for="recomiendaNo">No</label><br>
+              </div>
+              <h2>Añade un texto contándonos tu experiencia</h2>
+              <textarea id="review-experience" name="textBox_Review" rows="5" cols="20"
+                placeholder="Aqui puedes escribir tu experiencia con el abogado."></textarea>
+              <button class="btnNewReview">Publicar</button>
+            </form>
+          </div>
+        </div>
+      </div>
 
-    <!--Footer-->
-    <footer class="footer">
-      <div class="footer_box">
-        <h4>Síguenos</h4>
-        <p>+57 214 124124<br>
-          320 3314999<br>
-          Manolito@empresa.com</p>
-        <ul class="social">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-        </ul>
+      <!--Reviews-->
+      <!--Aqui se supone que se debería comprobar el tipo de usuario, si es un abogado mostrara las reviews del publico y 
+            si es un cliente la de los abogados, en caso de no tener nada debería mostrar algo tipo: "Este usuario no tiene reviews :p"-->
+      <div class="review">
+        <div class="wrapper">
+          <div class="right">
+            <h1>Aqui iria una review</h1>
+          </div>
+          <div class="left">
+            <img src="sources/user_example2.jpg">
+            <h3>Jose Juan</h3>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="right">
+            <h1>Aqui iria una review</h1>
+          </div>
+          <div class="left">
+            <img src="sources/user_example2.jpg">
+            <h3>Jose Juan</h3>
+          </div>
+        </div>
       </div>
-      <div class="footer-copyright">
-        <div class="container">&copy; 2021 | JustApp</div>
-      </div>
-    </footer>
-  </div>
+
+      <!--Footer-->
+      <footer class="footer">
+        <div class="footer_box">
+          <h4>Síguenos</h4>
+          <p>+57 214 124124<br>
+            320 3314999<br>
+            Manolito@empresa.com</p>
+          <ul class="social">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">&copy; 2021 | JustApp</div>
+        </div>
+      </footer>
+    </div>
 
 
     <script>
