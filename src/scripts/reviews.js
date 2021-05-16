@@ -46,7 +46,17 @@ reviewForm.addEventListener("submit",(e) => {
     }
   }
   //check if recomended
-
+  const btnRecomended = document.querySelectorAll('input[name="recomended"]');
+  let selectedRecomend;
+  for(const recomend of btnRecomended){
+    if(recomend.checked){
+      selectedRecomend = recomend.value;
+      break;
+    }
+  }
+  //get review text
+  const txtArea = document.querySelector('#review-experience');
+  let txtExperience = txtArea.value;
 
 
   //create review
@@ -59,9 +69,8 @@ reviewForm.addEventListener("submit",(e) => {
           title: reviewForm['review-title'].value,
           stars: selectedStar,
           type: selectedType,
-
-
-          
+          recomended: selectedRecomend,
+          experience: txtExperience          
         });
         
        }
