@@ -1,39 +1,114 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.rate {
-    margin-right: 43%;
-    height: 46px;
+
+/*Review*/
+.newReview {
+    margin: 0px 30px;
+    font-family: Trebuchet Ms;
+    color: black;
+}
+
+.newReview img {
+    margin-left: 0px;
+    margin-right: 25px;
+    width: 160px;
+    height: 170px;
+    float: left;
+}
+
+.newReview h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.newReview h2 {
+    font-size: 25px;
+}
+
+.newReview h3 {
+    font-size: 20px;
+}
+
+.newReview textarea {
+    width: 75%;
+    margin-left: 0px;
+    font-size: 18px;
+}
+
+.tipoReseña {
+    margin: 10px;
+    display: flex;
+}
+
+.tipoReseña label {
     padding: 0 10px;
 }
-.rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
+
+.reviewTitle{
+    height: 20px;
+    font-size: 18px;
+    border-style: solid;
+    border-color: #00916E;
 }
-.rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
+
+.btnNewReview {
+    margin-top: 70px;
+    float: right;
+    background-color: white;
+    color: black;
+    border: 2px solid #34b176;
+    border-radius: 6px;
+    padding: 16px 0;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 180px;
 }
-.rate:not(:checked) > label:before {
+
+.btnNewReview:hover {
+    background-color: #00916E;
+    color: white;
+}
+
+/*Star rate*/
+
+.rate {
+    margin-right: 43%;
+    height: 50px;
+    padding: 0 10px;
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
+    float: left;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 40px;
+    color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
     content: '★ ';
 }
-.rate > input:checked ~ label {
-    color: #ffc700;    
+
+.rate>input:checked~label {
+    color: #ffc700;
 }
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: #deb217;  
+
+.rate:not(:checked)>label:hover, .rate:not(:checked)>label:hover~label {
+    color: #deb217;
 }
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
+
+.rate>input:checked+label:hover, .rate>input:checked+label:hover~label, .rate>input:checked~label:hover, .rate>input:checked~label:hover~label, .rate>label:hover~input:checked~label {
     color: #c59b08;
 }
