@@ -77,7 +77,7 @@
 /*Star rate*/
 
 .rate {
-    margin-right: 43%;
+    margin-right: 74%;
     height: 50px;
     padding: 0 10px;
 }
@@ -88,7 +88,7 @@
 }
 
 .rate:not(:checked)>label {
-    float: left;
+    float: right;
     width: 1em;
     overflow: hidden;
     white-space: nowrap;
