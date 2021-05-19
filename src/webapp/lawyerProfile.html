@@ -110,7 +110,7 @@
           <!--Cierra projects-->
           <div class="openModal">
             <ul>
-              <li id="profileM-btn">Abrir Modal</li>
+              <li id="profileM-btn">Hacer reseña</li>
             </ul>
           </div>
         </div>
@@ -122,10 +122,9 @@
           <div class="newReview">
             <h1>Reseña Abogado</h1>
             <img src="sources/user_example.jpg" alt="icon_account">
-            <h2>Marco Antonio Franco</h2>
-            <h3>Compañia-Buffet</h3>
-            <i class="fas fa-map-marked-alt"><label>Ubicación de residencia</label></i><br>
-            <i class="fas fa-briefcase"><label>Profesión y espelización</label></i>
+            <h2 id="review-lawyer-name"></h2>
+            <i class="fas fa-map-marked-alt"><label id="review-lawyer-city"></label></i><br>
+            <i class="fas fa-briefcase"><label id="review-lawyer-position-workArea"></label></i>
             <br><br><br><br><br><br>
             <hr><br>
             <form id="review-form">
@@ -164,7 +163,7 @@
               <h2>Añade un texto contándonos tu experiencia</h2>
               <textarea id="review-experience" name="textBox_Review" rows="5" cols="20"
                 placeholder="Aqui puedes escribir tu experiencia con el abogado."></textarea>
-              <button class="btnNewReview">Publicar</button>
+              <button class="btn-choice">Publicar</button>
             </form>
           </div>
         </div>
@@ -175,22 +174,11 @@
             si es un cliente la de los abogados, en caso de no tener nada debería mostrar algo tipo: "Este usuario no tiene reviews :p"-->
       <div class="review">
         <div class="wrapper">
-          <div class="right">
-            <h1>Aqui iria una review</h1>
-          </div>
-          <div class="left">
-            <img src="sources/user_example2.jpg">
-            <h3>Jose Juan</h3>
-          </div>
-        </div>
-        <div class="wrapper">
-          <div class="right">
-            <h1>Aqui iria una review</h1>
-          </div>
-          <div class="left">
-            <img src="sources/user_example2.jpg">
-            <h3>Jose Juan</h3>
-          </div>
+          <table class="table">
+            <ul id="tabla">
+
+            </ul>
+          </table>
         </div>
       </div>
 
@@ -225,6 +213,7 @@
 
     <script type="module" src="../scripts/index.js"></script>
     <script type="module" src="../scripts/authStatus.js"></script>
+    <script type="module" src="../scripts/lawyerProfile.js"></script>
     <script type="module" src="../scripts/reviews.js"></script>
 
 </body>
