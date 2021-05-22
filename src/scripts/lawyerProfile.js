@@ -8,6 +8,7 @@ const description = document.querySelector('#lawyer-description');
 const reviewName = document.querySelector('#review-lawyer-name');
 const reviewCity = document.querySelector('#review-lawyer-city');
 const reviewPositionWorkarea = document.querySelector('#review-lawyer-position-workArea');
+let id = localStorage.getItem('ID');
 
 let tabla = document.querySelector('#tabla');
 
@@ -17,7 +18,7 @@ export const setupProfile = (id) => {
         const htmlName = `${doc.data().name + ' ' + doc.data().lastName}`;
         const htmlPosition = `${doc.data().position}`;
         const htmlCity = `${doc.data().city}`;
-        const htmlWorkArea = `Area objetivo: <br>${doc.data().workArea}`;
+        const htmlWorkArea = `${doc.data().workArea}`;
         const htmlDescription = `${doc.data().description}`;
 
         name.innerHTML = htmlName;
@@ -35,16 +36,24 @@ export const setupProfile = (id) => {
 db.collection("reviews").onSnapshot((querySnapshot) => {
     tabla.innerHTML='';
     querySnapshot.forEach((doc) => {
-        renderReview(doc);
+        if(id==doc.id){
+            renderReview(doc);
+        }
     });
 })
-
+//render review table
 function renderReview(doc){
     let li = document.createElement('li');
     let title = document.createElement('span')
     let stars = document.createElement('span');
     let type = document.createElement ('span');
     let experience = document.createElement ('span');
+
+    title.setAttribute('id', 'review-table-title');
+    stars.setAttribute('id', 'review-table-stars');
+    type.setAttribute('id', 'review-table-type');
+    experience.setAttribute('id', 'review-table-experience');
+    
 
     li.setAttribute('data-id', doc.id);
     title.textContent = doc.data().title;
