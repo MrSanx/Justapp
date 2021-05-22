@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +25,50 @@
       <!--Left Part-->
       <div class="left_header">
         <a href="index.html">
-          <img src="sources/logo.svg" alt="logo" class="nav-brand">
+          <img src="sources/LogoGold.png" alt="logo" class="nav-brand">
         </a>
+        <ul class="header_hyperlink">
+          <li class="logged-in">
+            <a href="events.html">Eventos</a>
+          </li>
+          <li class="logged-in">
+            <a href="directory.html">Directorio</a>
+          </li>
+          <li class="logged-in">
+            <a href="forum.html">Preguntas</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="right_header">
+        <ul class="nav-ini">
+          <li class="logged-out">
+            <a href="login.html"> Iniciar sesión </a>
+          </li>
+
+          <div class="logged-in">
+            <div class="action">
+              <div class="profile" onclick="menuToggle();">
+                <img src="sources/icon_account.png">
+              </div>
+              <div class="menu">
+                <h3>
+                  <div class="menu-name"></div>
+                  <div class="menu-email"></div>
+                </h3>
+                <ul>
+                  <li><img src="sources/user.png"><a href="#">Perfil</a></li>
+                  <li><img src="sources/edit.png"><a href="#">Editar perfil</a></li>
+                  <li><img src="sources/chat.png"><a href="#">Enviar Comentarios</a></li>
+                  <li><img src="sources/settings.png"><a href="#">Configuración</a></li>
+                  <li><img src="sources/question.png"><a href="#">Ayuda</a></li>
+                  <li><img src="sources/sign-out.png"><a href="#" id="logout">Cerrar Sesión</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
     </nav>
   </div>
 
@@ -41,45 +82,46 @@
             <img src="sources/logo.png">
           </div>
         </div>
-          <br><h3>Rellena los siguientes campos</h3>
-          <form id="signup-form">
-            <div class="input-field">
-              <br><input type="text" id="signup-name" placeholder="Nombre" required />
-              <input type="text" id="signup-lastName" placeholder="Apellido" required />
-              <input type="email" id="signup-email" placeholder="Correo electrónico"required />
-              <input type="password" id="signup-password" placeholder="Contraseña" required />
-              <h6>Al confirmar usted acepta los términos y condiciones de JustApp</h6>
-            </div>
-            <button class="btn-choice">Registrarse</button>
-          </form>
+        <br>
+        <h3>Rellena los siguientes campos</h3>
+        <form id="signup-form">
+          <div class="input-field">
+            <br><input type="text" id="signup-name" placeholder="Nombre" required />
+            <input type="text" id="signup-lastName" placeholder="Apellido" required />
+            <input type="email" id="signup-email" placeholder="Correo electrónico" required />
+            <input type="password" id="signup-password" placeholder="Contraseña" required />
+            <h6>Al confirmar usted acepta los términos y condiciones de JustApp</h6>
+          </div>
+          <button class="btn-choice">Registrarse</button>
+        </form>
       </div>
 
-    <!--Hotbar-->
-    
-  </div>
+      <!--Hotbar-->
 
-  <!--Footer-->
-  <footer class="footer">
-    <div class="footer_box">
-      <h4>Síguenos</h4>
-      <p>+57 214 124124<br>
-        320 3314999<br>
-        Manolito@empresa.com</p>
-      <ul class="social">
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-      </ul>
     </div>
-    <div class="footer-copyright">
-      <div class="container">&copy; 2021 | JustApp</div>
-    </div>
-  </footer>
 
-  <!--Natalia old sacred text-->
-  <!--<header class="page-head">
+    <!--Footer-->
+    <footer class="footer">
+      <div class="footer_box">
+        <h4>Síguenos</h4>
+        <p>+57 214 124124<br>
+          320 3314999<br>
+          Manolito@empresa.com</p>
+        <ul class="social">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">&copy; 2021 | JustApp</div>
+      </div>
+    </footer>
+
+    <!--Natalia old sacred text-->
+    <!--<header class="page-head">
     <a href="#" class="logo">
       <img src="logo.svg" alt="logo">
 
@@ -100,7 +142,7 @@
     </article>
   </main>-->
 
-  <script type="module" src="../scripts/signupClient.js"></script>
+    <script type="module" src="../scripts/signupClient.js"></script>
 
 </body>
 
