@@ -58,8 +58,8 @@ function renderReview(doc){
     li.setAttribute('data-id', doc.id);
     title.textContent = doc.data().title;
     stars.textContent = "Calificación: " + doc.data().stars;
-    type.textContent = doc.data().type;
-    experience.textContent = doc.data().experience;
+    type.textContent = "Tipo de reseña: " + doc.data().type;
+    experience.textContent = "Comentarios: " + doc.data().experience;
 
     li.appendChild(title);
     li.appendChild(stars);

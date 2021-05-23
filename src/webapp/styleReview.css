@@ -112,3 +112,69 @@
 .rate>input:checked+label:hover, .rate>input:checked+label:hover~label, .rate>input:checked~label:hover, .rate>input:checked~label:hover~label, .rate>label:hover~input:checked~label {
     color: #c59b08;
 }
+
+/*Reviews abogado*/
+.content2 {
+    background: #fcd882;
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1)
+}
+
+.content2 ul {
+    padding: 0;
+}
+
+.content2 li {
+    padding: 20px;
+    background: #3b4040;
+    font-size: 20px;
+    color: white;
+    position: static;
+    border-bottom: 2px solid #cecccc;
+    height: auto;
+}
+
+.content2 li:nth-child(even) {
+    padding: 20px;
+    background: #3b4040;
+}
+
+.content2 li span {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.content2 li span:nth-child(2) {
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgb(129, 129, 129);
+}
+
+.content2 li span:nth-child(3) {
+    font-size: 15px;
+    margin-top: 20px;
+    color: white;
+}
+
+.content2 li span:nth-child(4) {
+    font-size: 15px;
+    margin-top: 10px;
+    color: white;
+}
+
+.content2 li div {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255, 255, 255, 0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+}

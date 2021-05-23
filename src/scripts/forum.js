@@ -61,12 +61,14 @@ function renderDiscussion(doc){
 
   li.setAttribute('data-id', doc.id);
   title.textContent = doc.data().title;
-  experience.textContent = doc.data().experience;
   date.textContent = doc.data().date;
+  experience.textContent = doc.data().experience;
+  
 
   li.appendChild(title);
-  li.appendChild(experience);
   li.appendChild(date);
+  li.appendChild(experience);
+  
 
   tabla.appendChild(li);
 }
