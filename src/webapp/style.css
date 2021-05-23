@@ -18,6 +18,7 @@ body {
     margin-top: 1rem;
     text-align: center;
     align-items: center;
+    color: white;
 }
 
 a {
@@ -59,11 +60,10 @@ a {
 
 .nav a {
     font-size: large;
-    font-weight: bold;
     font-family: 'Roboto', sans-serif;
     color: white;
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .nav ul li a:hover {
@@ -119,15 +119,15 @@ a {
 }
 
 .btn-choice {
-    background-color: white;
-    color: black;
-    border: 2px solid #34b176;
+    background-color: #262A2B;
+    color: white;
+    border: 2px solid  #fad375;
     margin: 1rem 0 1rem 0;
 }
 
 .btn-choice:hover {
-    background-color: #00916E;
-    color: white;
+    background-color: #f5b625;
+    color: black;
 }
 
 /*-USER BAR-*/
@@ -306,10 +306,10 @@ footer {
 /*--Directorio de abogados--*/
 
 .content {
-    background: #fff;
+    background: #fcd882;
     max-width: 960px;
     margin: 30px auto;
-    padding: 20px 30px;
+    padding: 10px 10px;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1)
 }
@@ -320,9 +320,9 @@ footer {
 
 .content li {
     padding: 20px;
-    background: #f6f6f6;
+    background: #3b4040;
     font-size: 20px;
-    color: #555;
+    color: white;
     position: static;
     border-bottom: 2px solid #cecccc;
     height: auto;
@@ -330,7 +330,7 @@ footer {
 
 .content li:nth-child(even) {
     padding: 20px;
-    background: #f6f6f6;
+    background: #3b4040;
 }
 
 .content li span {
@@ -340,7 +340,7 @@ footer {
 .content li span:nth-child(2) {
     font-size: 16px;
     margin-top: 6px;
-    color: #999;
+    color: rgb(129, 129, 129);
 }
 
 .content li div {
@@ -368,16 +368,16 @@ footer {
 }
 
 .content a {
-    background-color: white;
-    color: black;
-    border: 2px solid #34b176;
+    background-color: #3b4040;
+    color: white;
+    border: 2px solid #fcd882;
     width: 70px;
     margin: 0 0 0 52rem;
 }
 
 .content a:hover {
-    background-color: #00916E;
-    color: white;
+    background-color: #f5b625;
+    color: black;
 }
 
 /*-HOME-*/
@@ -465,17 +465,18 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .cover h6 {
-    color: #393fff;
+    color: #fad375;
 }
 
 .rectangulo {
     width: auto;
     height: auto;
-    border: 3px solid #00916E;
-    margin: 2rem 35% 2rem 35%;
-    background-color: white;
+    border: 3px solid #fad375;
+    margin: 2rem 30% 2rem 30%;
+    background-color: #3c4242;
     text-align: center;
     border-radius: 1.8em;
+    color: white;
 }
 
 .rectanguloZ {
@@ -521,17 +522,17 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     margin: auto;
 }
 
 .cover-rec {
     width: 100%;
     height: 100px;
-    background-color: #e3edee;
+    background-color: #262a2b;
     border: none;
-    border-bottom: 2px solid #00916E;
+    border-bottom: 2px solid #fad375;
     border-radius: 1.8em;
 }
 
@@ -544,7 +545,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    padding-top: 100px;
+    padding-top: 10px;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -563,13 +564,16 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 /* Modal Content */
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #444849;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%;
-    border: 3px solid #00916E;
+    width: 80%;
+    border: 4px solid #fad375;
     border-radius: 0.5rem;
+}
+.modal-content h2{
+    color: white;
 }
 
 /* The Close Button */
@@ -589,33 +593,42 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 input[type=email] {
     border: none;
-    border-bottom: 2px solid #00916E;
+    border-bottom: 3px solid #fad375;
     margin: 1rem;
     width: 300px;
+    outline:none;
+    background:none;
 }
 
 input[type=password] {
     border: none;
-    border-bottom: 2px solid #00916E;
+    border-bottom: 3px solid #fad375;
     margin: 1rem;
     width: 300px;
+    outline:none;
+    background: none;
 }
 
 input[type=text] {
     border: none;
-    border-bottom: 2px solid #00916E;
+    border-bottom: 3px solid #fad375;
     margin: 1rem;
     width: 300px;
+    outline: none;
+    background: none;
 }
 
 textarea {
-    border: 2px solid #00916E;
+    border: 3px solid #fad375;
+    background: none;
+    color: white;
     margin: 1rem;
     width: 300px;
     height: 100px;
     text-align: start;
     resize: none;
     font-family: sans-serif;
+    outline: none;
 }
 
 /*PERFIL DEL ABOGADO*/
