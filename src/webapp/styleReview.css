@@ -51,7 +51,7 @@
     height: 20px;
     font-size: 18px;
     border-style: solid;
-    border-color: #00916E;
+    border-color: #fcd882;
 }
 
 .btnNewReview {
@@ -59,7 +59,7 @@
     float: right;
     background-color: white;
     color: black;
-    border: 2px solid #34b176;
+    border: 2px solid #fcd882;
     border-radius: 6px;
     padding: 16px 0;
     text-align: center;
@@ -70,7 +70,7 @@
 }
 
 .btnNewReview:hover {
-    background-color: #00916E;
+    background-color: #fcd882;
     color: white;
 }
 
@@ -94,7 +94,7 @@
     white-space: nowrap;
     cursor: pointer;
     font-size: 40px;
-    color: #ccc;
+    color: #eaeaea;
 }
 
 .rate:not(:checked)>label:before {
