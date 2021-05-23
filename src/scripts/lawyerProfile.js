@@ -36,7 +36,7 @@ export const setupProfile = (id) => {
 db.collection("reviews").onSnapshot((querySnapshot) => {
     tabla.innerHTML='';
     querySnapshot.forEach((doc) => {
-        if(id==doc.id){
+        if(id==doc.data().lawyerId){
             renderReview(doc);
         }
     });

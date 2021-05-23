@@ -7,11 +7,8 @@ setupProfile(id);
 
 // Get the modal
 var modal = document.getElementById("profileM");
-
-// Get the button that opens the modal
 var btn = document.getElementById("profileM-btn");
-
-// Get the <span> element that closes the modal
+var btnPublicar = document.getElementById("btn-publicar");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
@@ -23,10 +20,12 @@ btn.onclick = function() {
 span.onclick = function() {
   modal.style.display = "none";
 }
+btnPublicar.onclick = function(){
+  modal.style.display = "none";
+}
 
 reviewForm.addEventListener("submit",(e) => {
   e.preventDefault();
-
   //check selected star
   const btnStars = document.querySelectorAll('input[name="rate"]');
   let selectedStar;
@@ -65,23 +64,17 @@ reviewForm.addEventListener("submit",(e) => {
        var id2 = doc.id;
        if(id==id2)
        {
-        db.collection('reviews').doc(id).set({
+        db.collection('reviews').doc().set({
           title: reviewForm['review-title'].value,
           stars: selectedStar,
           type: selectedType,
           recomended: selectedRecomend,
-          experience: txtExperience          
+          experience: txtExperience,
+          lawyerId: id          
         });
-        
-       }
-       else {
-        document.getElementById("dato1").innerHTML="No se pudo encontrar su abogado";
        }
     });
 });
-
-
-
 })
 
 
