@@ -76,15 +76,25 @@
 
   <div class="top-bar">
     <h1>
-        My Forum
+        Justap Foro
     </h1>
     </div>
     <div class="main">
-        <div class="header">
+        <div id="thread-title" class="header">
         </div>
-        <textarea></textarea>
-        <button>add comment</button>
+        <form id="comment-form">
+          <textarea id="comment-textarea"></textarea>
+          <button id="btn-comentar" class="btn-choice">Comentar</button>
+        </form>
         <div class="comments">
+          <div class ="content3">
+            <table class="table">
+              <ul id="tabla">
+              
+              
+              </ul>
+            </table>
+          </div>
         </div>
     </div>
   <!--Footer-->
@@ -107,8 +117,7 @@
     </div>
   </footer>
 
-  <script src="../scripts/discussion.js"></script>
-  <script src="../scripts/thread.js"></script>
+  <script type="module" src="../scripts/thread.js"></script>
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">

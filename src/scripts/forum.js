@@ -18,6 +18,7 @@ discussionForm.addEventListener('submit', (e) => {
         experience: txtExperience,
         date: formattedDate 
     });
+    discussionForm.reset();
     
 
 })
@@ -50,11 +51,12 @@ db.collection("discussions").onSnapshot((querySnapshot) => {
 //render review table
 function renderDiscussion(doc){
   let li = document.createElement('li');
-  let title = document.createElement('span')
+  let title = document.createElement('a')
   let experience = document.createElement ('span');
   let date = document.createElement ('span');
 
   title.setAttribute('id', 'discussion-table-title');
+  title.setAttribute('href', 'thread.html');
   experience.setAttribute('id', 'discussion-table-experience');
   date.setAttribute('id', 'discussion-table-date');
   
@@ -71,6 +73,12 @@ function renderDiscussion(doc){
   
 
   tabla.appendChild(li);
+
+  title.addEventListener('click', (e) => {
+    e.stopPropagation();
+    let id = e.target.parentElement.getAttribute('data-id');
+    localStorage.setItem('discussionID', id);
+  });
 }
 
 

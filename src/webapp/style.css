@@ -619,6 +619,7 @@ input[type=text] {
     width: 300px;
     outline: none;
     background: none;
+    color: white;
 }
 
 textarea {

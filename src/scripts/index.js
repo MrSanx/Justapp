@@ -17,6 +17,7 @@ export const setupUI = (user) => {
             `;
             menuEmail.innerHTML = htmlEmail;
             menuName.innerHTML = htmlMenuName;
+            localStorage.setItem('userName', doc.data().name + ' ' + doc.data().lastName);
         }).catch(err => {
             console.error()
         })
@@ -29,6 +30,7 @@ export const setupUI = (user) => {
             `;
             menuEmail.innerHTML = htmlEmail;
             menuName.innerHTML = htmlMenuName;
+            localStorage.setItem('userName', doc.data().name + ' ' + doc.data().lastName);
         }).catch(err => {
             console.error()
         })
