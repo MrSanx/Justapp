@@ -88,9 +88,13 @@
     </div>
     </div>
   </div>
-  <div class="main">
-      <ol>
-      </ol>
+  <div class ="content">
+    <table class="table">
+      <ul id="tabla">
+      
+      
+      </ul>
+    </table>
   </div>
 
 <div class="modal" id="newDiscussion">
@@ -129,6 +133,13 @@
       <div class="container">&copy; 2021 | JustAp</div>
     </div>
   </footer>
+
+  <script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector('.menu');
+      toggleMenu.classList.toggle('active');
+    }
+  </script>
 
   <script type="module" src="../scripts/forum.js"></script>
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>

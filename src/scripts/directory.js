@@ -1,9 +1,6 @@
 import {db} from './init.js';
 
 
-let modal = document.getElementById("profileM");
-let span = document.getElementsByClassName("close")[0];
-
 let tabla = document.querySelector('#tabla');
 
 //Crear nuevo espacio cuando se añade un nuevo abogado
@@ -33,16 +30,6 @@ function renderLawyer(doc){
     });
 }
 
-
-//Search a specific lawyer
-var lawyers=[];
-function Lawyer (name, lastName,professionalCard,phone)
-{
-    this.name=name;
-    this.lastName=lastName;
-    this.professionalCard=professionalCard;
-    this.phone=phone;
-}
 
 //Mostrar todos los abogados
 db.collection("lawyers").onSnapshot((querySnapshot) => {

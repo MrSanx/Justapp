@@ -39,5 +39,37 @@ btnPublicar.onclick = function(){
     modal.style.display = "none";
 }
 
+//------------------------------------------------------------------------------------------------
+let tabla = document.querySelector('#tabla');
+db.collection("discussions").onSnapshot((querySnapshot) => {
+  tabla.innerHTML='';
+  querySnapshot.forEach((doc) => {
+      renderDiscussion(doc);
+  });
+})
+//render review table
+function renderDiscussion(doc){
+  let li = document.createElement('li');
+  let title = document.createElement('span')
+  let experience = document.createElement ('span');
+  let date = document.createElement ('span');
+
+  title.setAttribute('id', 'discussion-table-title');
+  experience.setAttribute('id', 'discussion-table-experience');
+  date.setAttribute('id', 'discussion-table-date');
+  
+
+  li.setAttribute('data-id', doc.id);
+  title.textContent = doc.data().title;
+  experience.textContent = doc.data().experience;
+  date.textContent = doc.data().date;
+
+  li.appendChild(title);
+  li.appendChild(experience);
+  li.appendChild(date);
+
+  tabla.appendChild(li);
+}
+
 
 
