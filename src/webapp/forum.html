@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="sources\brand.png" type="image/icon type">
-  <link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
   <title>Forum | Justapp</title>
   <!-- update the version number as needed -->
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
@@ -74,46 +73,46 @@
     </nav>
   </div>
 
-  <!--COPIA EXACTA, DEBE SER MODIFICADA CORRESPONDIENTEMENTE O CAMBIADA COMPLETAMENTE-->
-  <div class="top-bar">
-    <h1>
-        Justap Foro
-    </h1>
-    <div class="wrapper2">
-      <div class="openModal">
-        <ul>
-          <li id="newDiscussion-btn">Nueva discusión</li>
+  <!--Bodyy-->
+  <div class="bodyy">
+    <!--Titulo del foro-->
+    <div class="top-bar">
+      <h1>Justap Foro</h1>
+      <div class="right_bar">
+        <div class="wrapper2">
+          <div class="openModal">
+            <ul><li id="newDiscussion-btn">Nueva discusión</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Discuciones-->
+    <div class="content3">
+      <table class="table">
+        <ul id="tabla">
         </ul>
+      </table>
+    </div>
+
+    <div class="modal" id="newDiscussion">
+      <div class="modal-content">
+        <!--Ventana emergente-->
+        <span class="close">&times;</span>
+        <div class="newDiscussion">
+          <form id="discussion-form">
+            <h2>Titulo Discusión</h2>
+            <input type="text" id="discussion-title" class="discussion-Title" placeholder="Titulo"><br>
+            <h2>¿Cuál es tu caso?</h2>
+            <textarea id="discussion-experience" name="textBox_discussion" rows="5" cols="20"
+              placeholder="Escribe aqui tus dudas"></textarea>
+            <button id="btn-publicar" class="btn-choice">Publicar</button>
+          </form>
+        </div>
       </div>
     </div>
-    </div>
   </div>
-  <div class ="content3">
-    <table class="table">
-      <ul id="tabla">
-      
-      
-      </ul>
-    </table>
-  </div>
-
-<div class="modal" id="newDiscussion">
-  <div class="modal-content">
-    <!--Ventana emergente-->
-    <span class="close">&times;</span>
-      <div class="newDiscussion">
-        <form id="discussion-form">
-          <h2>Titulo Discusión</h2>
-          <input type="text" id="discussion-title" class="discussion-Title" placeholder="Titulo"><br>
-          <h2>¿Cuál es tu caso?</h2>
-          <textarea id="discussion-experience" name="textBox_discussion" rows="5" cols="20"
-            placeholder="Escribe aqui tus dudas"></textarea>
-          <button id="btn-publicar"class="btn-choice">Publicar</button>
-        </form>
-      </div>
-  </div>
-</div>
-
+  
   <!--Footer-->
   <footer class="footer">
     <div class="footer_box">

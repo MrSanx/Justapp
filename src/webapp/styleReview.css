@@ -178,3 +178,50 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.threadTitle{
+    box-sizing: border-box;
+    font-family: oswald,sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -0.44px;
+}
+
+.bodyyy{
+    padding: 20px;
+}
+
+.threadLine{
+    background-color: #1c1c24;
+    padding: 10px 20px;
+    font-size: 6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #56747b;
+}
+
+.textArea2 {
+    border: 3px solid #fad375;
+    background: #3b4040;
+    color: white;
+    margin: 0px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 99%;
+    font-size: 20px;
+    height: 100px;
+    text-align: start;
+    resize: none;
+    font-family: sans-serif;
+    outline: none;
+}
+
+.threadLine a{
+    all: revert;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #56747b;
+    
+}

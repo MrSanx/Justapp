@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="sources\brand.png" type="image/icon type">
-  <link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
   <title>Forum | Justapp</title>
   <!-- update the version number as needed -->
   <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
@@ -74,29 +73,34 @@
     </nav>
   </div>
 
+  <!--Titulo Foro-->
   <div class="top-bar">
-    <h1>
-        Justap Foro
-    </h1>
+    <h1>Justap Foro</h1>
+  </div>
+  <div class="threadLine">
+    <h1> <a href="forum.html">Forums > General ></a> <label id="thread-title"></label></h1>
+  </div>
+  <!--Bodyy-->
+  <div class="bodyyy">
+    <!--Titulo Discusión-->
+    <div id="thread-title" class="threadTitle"></div>
+    <!--Comentarios-->
+    <div class="content3">
+      <table class="table">
+        <ul id="tabla">
+        </ul>
+      </table>
     </div>
-    <div class="main">
-        <div id="thread-title" class="header">
-        </div>
-        <form id="comment-form">
-          <textarea id="comment-textarea"></textarea>
-          <button id="btn-comentar" class="btn-choice">Comentar</button>
-        </form>
-        <div class="comments">
-          <div class ="content3">
-            <table class="table">
-              <ul id="tabla">
-              
-              
-              </ul>
-            </table>
-          </div>
-        </div>
-    </div>
+    <h1 class="threadTitle" style="font-size: 18px;">Unete a la discusión</h1>
+    <hr>
+    <!--Comentar-->
+    <form id="comment-form">
+      <textarea id="comment-textarea" class="textArea2" placeholder="Responde a este tema..."></textarea>
+      <button id="btn-comentar" class="btn-choice">Comentar</button>
+    </form>
+  </div>
+
+
   <!--Footer-->
   <footer class="footer">
     <div class="footer_box">
