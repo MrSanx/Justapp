@@ -3,6 +3,13 @@ const btnFiltrar = document.querySelector("#btnPruebaFiltrado");
 
 
 let tabla = document.querySelector('#tabla');
+let workAreaFilter = document.querySelector('#filter-workArea')
+let workAreaSelected = '';
+
+workAreaFilter.addEventListener('change', () => {
+    workAreaSelected = workAreaFilter.options[workAreaFilter.selectedIndex].value;
+    console.log(workAreaSelected);
+});
 
 //Crear nuevo espacio cuando se añade un nuevo abogado
 function renderLawyer(doc){
@@ -44,7 +51,7 @@ db.collection("lawyers").onSnapshot((querySnapshot) => {
 btnFiltrar.addEventListener('click', (e) => {
     e.preventDefault();
     console.log("funcionando");
-    db.collection("lawyers").where("name","==","Daniel").onSnapshot((querySnapshot) => {
+    db.collection("lawyers").where("workArea","==",workAreaSelected).onSnapshot((querySnapshot) => {
         tabla.innerHTML='';
         querySnapshot.forEach((doc) => {
             renderLawyer(doc);
