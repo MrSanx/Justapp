@@ -29,6 +29,7 @@ commentForm.addEventListener("submit",(e) => {
               comment: commentText.value,
               discussionId: discussionID          
             });
+            commentForm.reset();
            }
         });
     });
