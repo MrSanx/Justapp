@@ -53,13 +53,17 @@
             <h4>Datos Abogado</h4>
             <br><input type="text" id="signup-professionalCard" placeholder="Tarjeta profesional" required />
             <input type="text" id="signup-phone" placeholder="Teléfono" required />
-            <input type="text" id="signup-gender" placeholder="Género" required />
-            <input type="text" id="signup-experience" placeholder="Años de experiencia" required />
+            <p>Género</p>
+              <br><input type="radio" id="signup-gender" name="genero" cheked="cheked" value="Femenino">
+              <label for="Femenino">Femenino</label>
+              <input type="radio" id="signup-gender" name="genero" cheked="cheked" value="Masculino">
+              <label for="Masculino">Masculino</label>
+            <br><input type="text" id="signup-experience" placeholder="Años de experiencia" required />
             <input type="text" id="signup-position" placeholder="Cargo que ejerce" required />
-            <h5>Especialización</h5>
-            <br><select id="signup-workArea" required>
+            <p>Especialización</p>
+            <select id="signup-workArea" required>
               <option disabled hidden selected>Seleccione especialización</option>
-              <option value="Quiebras y deudas">Quiebras y deudas</option>
+              <option value="Quiebres y deudas">Quiebres y deudas</option>
               <option value="Derechos civiles">Derechos civiles</option>
               <option value="Familia">Familia</option>
               <option value="Lesión personal">Lesión personal</option>
