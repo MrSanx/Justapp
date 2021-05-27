@@ -1,6 +1,15 @@
 import {auth,db} from './init.js';
 //signup
 const signupForm = document.querySelector('#signup-form');
+let workAreaSelections = document.querySelector('#signup-workArea')
+let workAreaSelected = '';
+
+workAreaSelections.addEventListener('change', () => {
+    workAreaSelected = workAreaSelections.options[workAreaSelections.selectedIndex].value;
+    console.log(workAreaSelected);
+});
+
+
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -8,23 +17,28 @@ signupForm.addEventListener('submit', (e) => {
     const email = signupForm['signup-email'].value;
     const password = signupForm['signup-password'].value;
 
-    //user sign up
-    auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        return db.collection('lawyers').doc(cred.user.uid).set({
-            name: signupForm['signup-name'].value,
-            lastName: signupForm['signup-lastName'].value,
-            professionalCard: signupForm['signup-professionalCard'].value,
-            phone: signupForm['signup-phone'].value,
-            gender: signupForm['signup-gender'].value,
-            experience: signupForm['signup-experience'].value,
-            position: signupForm['signup-position'].value,
-            workArea: signupForm['signup-workArea'].value,
-            city: signupForm['signup-city'].value,
-            description: signupForm['signup-description'].value
+    if(workAreaSelected != ''){
+        //user sign up
+        auth.createUserWithEmailAndPassword(email, password).then(cred => {
+            return db.collection('lawyers').doc(cred.user.uid).set({
+                name: signupForm['signup-name'].value,
+                lastName: signupForm['signup-lastName'].value,
+                professionalCard: signupForm['signup-professionalCard'].value,
+                phone: signupForm['signup-phone'].value,
+                gender: signupForm['signup-gender'].value,
+                experience: signupForm['signup-experience'].value,
+                position: signupForm['signup-position'].value,
+                workArea: workAreaSelected,
+                city: signupForm['signup-city'].value,
+                description: signupForm['signup-description'].value
+            });
+        }).then(() => {
+            //what happens when the user signs up
+            window.location.href = '../webapp/index.html';
+            signupForm.reset();
         });
-    }).then(() => {
-        //what happens when the user signs up
-        window.location.href = '../webapp/index.html';
-        signupForm.reset();
-    });
+    }else{
+        window.alert("Por favor seleccione una especialización")
+    }
+
 });
