@@ -1,4 +1,5 @@
 import {db} from './init.js';
+const btnFiltrar = document.querySelector("#btnPruebaFiltrado");
 
 
 let tabla = document.querySelector('#tabla');
@@ -37,4 +38,16 @@ db.collection("lawyers").onSnapshot((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         renderLawyer(doc);
     });
+})
+
+//prueba filtrado
+btnFiltrar.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log("funcionando");
+    db.collection("lawyers").where("name","==","Daniel").onSnapshot((querySnapshot) => {
+        tabla.innerHTML='';
+        querySnapshot.forEach((doc) => {
+            renderLawyer(doc);
+        });
+    })
 })
