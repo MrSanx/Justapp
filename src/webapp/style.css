@@ -310,9 +310,7 @@ footer {
     border: 3px solid #fad375;
     background-color: #3c4242;
     color: white;
-    margin-left: 20px;
-    margin-top: 30px;
-    margin-bottom: 1px;
+    margin:20px auto;
     width: 300px;
     height: 20px;
     text-align: start;
