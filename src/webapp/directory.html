@@ -74,7 +74,8 @@
       ID a buscar : <input type="text" id="search" placeholder="id a buscar" required />
       <button onclick="buscarAbogado();"  id="x" >Buscar</button> -->
       <h1> Nuestros abogados </h1>
-      <a class="filtro">Filtrar por especializacion:</a>
+      <div class ="content">
+        <span class="filtro">Filtrar por especializacion:</span>
       <select class="select2" id="filter-workArea" required>
         <option selected value="Todos">Todos</option>
         <option value="Quiebres y deudas">Quiebres y deudas</option>
@@ -93,7 +94,6 @@
         <option value="Planificación patrimonial">Planificación patrimonial</option>
       </select>
       <button id="btnPruebaFiltrado" class="btn-choice-filtrer">Filtrar</button>
-      <div class ="content">
         <table class="table">
           <ul id="tabla">
           

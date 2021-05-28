@@ -320,7 +320,8 @@ footer {
 }
 
 .filtro{
-    margin:20px auto;
+    margin-left: 10px;
+    font-weight: bold;
 }
 
 .btn-choice-filtrer {
