@@ -49,7 +49,8 @@ db.collection("lawyers").onSnapshot((querySnapshot) => {
 
 //prueba filtrado
 btnFiltrar.addEventListener('click', (e) => {
-    e.preventDefault();
+    if(workAreaSelected!="Todos"){
+        e.preventDefault();
     console.log("funcionando");
     db.collection("lawyers").where("workArea","==",workAreaSelected).onSnapshot((querySnapshot) => {
         tabla.innerHTML='';
@@ -57,4 +58,13 @@ btnFiltrar.addEventListener('click', (e) => {
             renderLawyer(doc);
         });
     })
+    } else {
+        db.collection("lawyers").onSnapshot((querySnapshot) => {
+            tabla.innerHTML='';
+            querySnapshot.forEach((doc) => {
+                renderLawyer(doc);
+            });
+        })
+    }
+    
 })

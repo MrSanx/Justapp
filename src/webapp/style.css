@@ -306,11 +306,60 @@ footer {
 /*--PAGE--*/
 
 /*--Directorio de abogados--*/
+.select2{
+    border: 3px solid #fad375;
+    background-color: #3c4242;
+    color: white;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 1px;
+    width: 300px;
+    height: 20px;
+    text-align: start;
+    resize: none;
+    font-family: sans-serif;
+    outline: none;
+}
+
+.filtro{
+    margin-left: 150px;
+}
+
+.btn-choice-filtrer {
+    color: #0099CC;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100px;
+    height: 25px;
+    
+}
+
+.btn-choice-filtrer {
+    background-color: #262A2B;
+    color: white;
+    border: 2px solid #fad375;
+    margin: 10px 0 10px 0;
+}
+
+.btn-choice-filtrer:hover {
+    background-color: #f5b625;
+    color: black;
+}
 
 .content {
     background: #fcd882;
     max-width: 960px;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 10px 10px;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1)
@@ -656,8 +705,8 @@ select{
     resize: none;
     font-family: sans-serif;
     outline: none;
-
 }
+
 
 /*PERFIL DEL ABOGADO*/
 
