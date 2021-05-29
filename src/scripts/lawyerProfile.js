@@ -8,6 +8,7 @@ const description = document.querySelector('#lawyer-description');
 const reviewName = document.querySelector('#review-lawyer-name');
 const reviewCity = document.querySelector('#review-lawyer-city');
 const reviewPositionWorkarea = document.querySelector('#review-lawyer-position-workArea');
+const btnLawyerMail = document.querySelector('#lawyer-mail');
 let id = localStorage.getItem('ID');
 
 let tabla = document.querySelector('#tabla');
@@ -28,7 +29,8 @@ export const setupProfile = (id) => {
         position.innerHTML = htmlPosition;
         city.innerHTML = htmlCity;
         workArea.innerHTML = htmlWorkArea;
-        description.innerHTML = htmlDescription;       
+        description.innerHTML = htmlDescription;
+        btnLawyerMail.setAttribute('href', `mailto:${doc.data().email}?Subject=Interesado%20en%20sus%20servicios%20(VIA-JUSTAP)`); 
 
     })
 }
