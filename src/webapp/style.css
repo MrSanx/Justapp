@@ -784,12 +784,14 @@ select{
     background-color: #292729;
     color: #eaeaea;
     border: 2px solid #fcd882;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 4rem 1rem 0;
     width: 200px;
-    height: 45px;
+    height: 50px;
     border-radius: 5px;
     text-align: center;
     line-height: 45px;
+    display: inline-block;
+    padding: 1px;
 }
 
 .wrapper .openModal ul li:hover {
