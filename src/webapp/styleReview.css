@@ -4,6 +4,7 @@
 }
 
 /*Review*/
+
 .newReview {
     margin: 0px 30px;
     font-family: Trebuchet Ms;
@@ -47,7 +48,7 @@
     padding: 0 10px;
 }
 
-.reviewTitle{
+.reviewTitle {
     height: 20px;
     font-size: 18px;
     border-style: solid;
@@ -114,6 +115,7 @@
 }
 
 /*Reviews abogado*/
+
 .content2 {
     background: #fcd882;
     max-width: 960px;
@@ -179,9 +181,9 @@
     cursor: pointer;
 }
 
-.threadTitle{
+.threadTitle {
     box-sizing: border-box;
-    font-family: oswald,sans-serif;
+    font-family: oswald, sans-serif;
     font-size: 22px;
     font-weight: 400;
     line-height: 1.2;
@@ -191,11 +193,11 @@
     letter-spacing: -0.44px;
 }
 
-.bodyyy{
+.bodyyy {
     padding: 20px;
 }
 
-.threadLine{
+.threadLine {
     background-color: #1c1c24;
     padding: 10px 20px;
     font-size: 6px;
@@ -219,9 +221,37 @@
     outline: none;
 }
 
-.threadLine a{
+.threadLine a {
     all: revert;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #56747b;
-    
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.info {
+    padding: 0 20px;
+    margin-bottom: 10px;
+    display: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align:left;
+    font-size: 14px;
+    font-weight: 10;
+    color:#eaeaea;
+    overflow: hidden;
 }

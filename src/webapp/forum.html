@@ -77,7 +77,9 @@
       <div class="right_bar">
         <div class="wrapper2">
           <div class="openModal">
-            <ul><li id="newDiscussion-btn">Nueva discusión</li></ul>
+            <ul>
+              <li id="newDiscussion-btn">Nueva discusión</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -97,18 +99,41 @@
         <span class="close">&times;</span>
         <div class="newDiscussion">
           <form id="discussion-form">
-            <h2>Titulo Discusión</h2>
-            <input type="text" id="discussion-title" class="discussion-Title" placeholder="Titulo"><br>
-            <h2>¿Cuál es tu caso?</h2>
-            <textarea id="discussion-experience" name="textBox_discussion" rows="5" cols="20"
-              placeholder="Escribe aqui tus dudas"></textarea>
+            <!--Obligatorios-->
+            <div>
+              <h2>Titulo Discusión</h2>
+              <input type="text" id="discussion-title" class="discussion-Title" placeholder="Titulo"><br>
+              <h2>¿Cuál es tu caso? </h2>
+              <textarea id="discussion-experience" name="textBox_discussion" rows="5" cols="20"
+                placeholder="Escribe aqui tus dudas"></textarea>
+            </div>
+            <!--Opcionales-->
+            <div>
+              <h2>Presupuesto <i class="fas fa-filter"></i></h2>
+              <input type="text" id="discussion-title" class="discussion-Title" placeholder="Presupuesto"><br>
+              <h2>Localidad <i class="fas fa-filter"></i></h2>
+              <input type="text" id="discussion-title" class="discussion-Title" placeholder="Localidad"><br>
+            </div>
+            <!--Instrucciones de uso-->
+            <button type="button" class="collapsible">Instrucciones de uso</button>
+            <div class="info">
+              <p>Los formularios con * son de caracter obligatorio.</p>
+              <p>Las preguntas NO son de caracter anonimo y son guardadas en el sistema, en caso de necesitar su
+                eliminación comuniquese en nuestro sistema de ayuda.</p>
+              <p>Evite poner información personal suya y de los demás, evite pasar malos ratos.</p>
+              <p>En caso de cuadrar cita con un abogado por favor use el sistema de la plataforma correspondientemente.
+              </p>
+              <p>No nos hacemos responsables del mal uso de la plataforma, se le recomienda leer atentamente lo
+                escrito.</p>
+              <p>Por favor se respetuoso y comportate.</p>
+            </div>
             <button id="btn-publicar" class="btn-choice">Publicar</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-  
+
   <!--Footer-->
   <footer class="footer">
     <div class="footer_box">
@@ -139,8 +164,22 @@
   <script type="module" src="../scripts/forum.js"></script>
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
+  <script type="text/javascript"></script>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
   </script>
 </body>
 
