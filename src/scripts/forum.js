@@ -1,26 +1,30 @@
 import {db} from './init.js';
+//get el form de la discusion
 const discussionForm = document.querySelector('#discussion-form');
+//get la fecha actual
 let date = new Date();
 let formattedDate = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear() + '/' + date.getHours() + ':' + date.getMinutes();
 
+//event listener del boton del form de la discusion
 discussionForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+    //get titulo 
     const txtTitle = document.querySelector('#discussion-title');
     let discussionTitle = txtTitle.value;
-
+    //get cuerpo de la discusion
     const txtArea = document.querySelector('#discussion-experience');
     let txtExperience = txtArea.value;
+    //get recomendaciones del usuario (a tener en cuenta para los abogados que vean el caso)
 
 
+    //crear una discucion en el firebase
     db.collection('discussions').doc().set({
+        //campos del objeto discusion en el firebase
         title: discussionTitle,
         experience: txtExperience,
         date: formattedDate 
     });
     discussionForm.reset();
-    
-
 })
 // Get the modal
 var modal = document.getElementById("newDiscussion");

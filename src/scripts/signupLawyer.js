@@ -16,6 +16,7 @@ signupForm.addEventListener('submit', (e) => {
     //get user info
     const email = signupForm['signup-email'].value;
     const password = signupForm['signup-password'].value;
+    let signupGender = document.querySelector('input[name="genero"]:checked').value;
 
     if(workAreaSelected != ''){
         //user sign up
@@ -25,11 +26,12 @@ signupForm.addEventListener('submit', (e) => {
                 lastName: signupForm['signup-lastName'].value,
                 professionalCard: signupForm['signup-professionalCard'].value,
                 phone: signupForm['signup-phone'].value,
-                gender: signupForm['signup-gender'].value,
+                gender: signupGender,
                 experience: signupForm['signup-experience'].value,
                 position: signupForm['signup-position'].value,
                 workArea: workAreaSelected,
                 city: signupForm['signup-city'].value,
+                email: email,
                 description: signupForm['signup-description'].value
             });
         }).then(() => {
