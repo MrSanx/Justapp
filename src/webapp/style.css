@@ -972,6 +972,11 @@ select{
     margin-top: 10px;
     color: white;
 }
+.content3 li span:nth-child(5) {
+    font-size: 15px;
+    margin-top: 10px;
+    color: white;
+}
 
 .content3 li div {
     position: absolute;
