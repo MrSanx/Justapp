@@ -15,14 +15,26 @@ discussionForm.addEventListener('submit', (e) => {
     const txtArea = document.querySelector('#discussion-experience');
     let txtExperience = txtArea.value;
     //get recomendaciones del usuario (a tener en cuenta para los abogados que vean el caso)
-
-
+    const txtBudget = document.querySelector('#discussion-budget');
+    let discussionBudget = txtBudget.value; 
+    const txtLocation =document.querySelector('#discussion-location');
+    let  discussionLocation=txtLocation.value;
+    
+    if (discussionBudget==''){
+      discussionBudget='none';
+    }
+    if (discussionLocation=='')
+     {
+       discussionLocation='none';
+     }
     //crear una discucion en el firebase
     db.collection('discussions').doc().set({
         //campos del objeto discusion en el firebase
         title: discussionTitle,
         experience: txtExperience,
-        date: formattedDate 
+        date: formattedDate,
+        budget: discussionBudget,
+        location:discussionLocation 
     });
     discussionForm.reset();
 })
@@ -84,6 +96,7 @@ function renderDiscussion(doc){
     localStorage.setItem('discussionID', id);
   });
 }
+
 
 
 

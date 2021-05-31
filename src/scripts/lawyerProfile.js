@@ -2,6 +2,7 @@ import {db} from './init.js'
 
 const name = document.querySelector('#lawyer-name');
 const position = document.querySelector('#lawyer-position');
+const number = document.querySelector('#lawyer-number');
 const city = document.querySelector('#lawyer-city');
 const workArea = document.querySelector('#lawyer-workArea');
 const description = document.querySelector('#lawyer-description');
@@ -18,6 +19,7 @@ export const setupProfile = (id) => {
         
         const htmlName = `${doc.data().name + ' ' + doc.data().lastName}`;
         const htmlPosition = `${doc.data().position}`;
+        const htmlNumber = `${doc.data().phone}`;
         const htmlCity = `${doc.data().city}`;
         const htmlWorkArea = `${doc.data().workArea}`;
         const htmlDescription = `${doc.data().description}`;
@@ -27,6 +29,7 @@ export const setupProfile = (id) => {
         reviewCity.innerHTML = htmlCity;
         reviewPositionWorkarea.innerHTML = htmlPosition +" / "+ `${doc.data().workArea}`;
         position.innerHTML = htmlPosition;
+        number.innerHTML = htmlNumber;
         city.innerHTML = htmlCity;
         workArea.innerHTML = htmlWorkArea;
         description.innerHTML = htmlDescription;
