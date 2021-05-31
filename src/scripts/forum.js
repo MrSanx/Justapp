@@ -71,22 +71,35 @@ function renderDiscussion(doc){
   let title = document.createElement('a')
   let experience = document.createElement ('span');
   let date = document.createElement ('span');
+  let budget = document.createElement('span');
+  let location = document.createElement('span');
 
   title.setAttribute('id', 'discussion-table-title');
   title.setAttribute('href', 'thread.html');
   experience.setAttribute('id', 'discussion-table-experience');
   date.setAttribute('id', 'discussion-table-date');
+  budget.setAttribute('id', 'discussion-table-budget');
+  location.setAttribute('id', 'discussion-table-location');
   
-
   li.setAttribute('data-id', doc.id);
   title.textContent = doc.data().title;
   date.textContent = doc.data().date;
   experience.textContent = doc.data().experience;
+
+  if(doc.data().budget == 'none'){budget.textContent = '';}
+  else{budget.textContent = "Presupuesto: "+doc.data().budget;}
+
+  if(doc.data().location == 'none'){location.textContent = '';}
+  else{location.textContent = "Ubicación: "+doc.data().location;}
+  
+  
   
 
   li.appendChild(title);
   li.appendChild(date);
   li.appendChild(experience);
+  li.appendChild(budget);
+  li.appendChild(location)
   
 
   tabla.appendChild(li);
