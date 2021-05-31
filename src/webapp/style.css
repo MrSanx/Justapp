@@ -719,6 +719,14 @@ input[type=text] {
     background: none;
     color: white;
 }
+input[type=number] {
+    border: 3px solid #fad375;
+    margin: 1rem;
+    width: 300px;
+    outline: none;
+    background: none;
+    color: white;
+}
 input[type=radio] {
     width: 30px;
 }
